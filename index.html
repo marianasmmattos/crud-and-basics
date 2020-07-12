@@ -7,14 +7,26 @@
     <link rel="stylesheet" type="text/css" href="style.css"> 
 </head>
 <body>
-    <h1>Cadastro de nomes</h1>
-    <form>
-        <label>Nome:</label>
-        <input type="text" id="inputName" placeholder="Nos informe seu nome!" />
-    </form>
 
-    <h2>Nomes cadastrados até o momento</h2>
-    <div id="names"></div>
+    <div class="rgb">
+        <h1>Mude o plano de fundo<span></span></h1>
+        <label>red:</label>
+        <input type="range" id="rangeRed" value="0" min="0" max="255">
+        <label>green:</label>
+        <input type="range" id="rangeGreen" value="0" min="0" max="255">
+        <label>blue:</label>
+        <input type="range" id="rangeBlue" value="0" min="0" max="255">
+    </div>
+
+    <div class="cadastro">
+        <h1>Cadastro de nomes</h1>
+        <form>
+            <label>Nome:</label>
+            <input type="text" id="inputName" placeholder="Nos informe seu nome!" />
+        </form>
+        <h2>Nomes cadastrados até o momento</h2>
+        <div id="names"></div>
+    </div>
 
     <script src="scripts.js"></script>   
 </body>
