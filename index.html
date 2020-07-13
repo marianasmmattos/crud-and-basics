@@ -18,9 +18,9 @@
             <ul>
                 <li><h2 id="text">Módulo 01</h2>
                     <ul>
-                        <li><button>Regra de três</button></li>
-                        <li><button>Cores RGB</button></li>
-                        <li><button>Lista CRUD</button></li>
+                        <li><button class="rt">Regra de três</button></li>
+                        <li><button class="rgb">Cores RGB</button></li>
+                        <li><button class="crud">Lista CRUD</button></li>
                         <li><button>Quem produziu?</button></li>
                     </ul>
                  </li>
@@ -28,7 +28,7 @@
         </nav>
     </div>
 
-    <div class="regradetres">
+    <div id="regradetres">
         <h1>Calculadora de Regra de Três Simples</h1>
         <input type="checkbox" id="inverso"><label>Inversamente proporcional</label>
         <label>Primeiro valor</label>
@@ -41,7 +41,7 @@
         <input id="valuefour">
     </div>
 
-    <div class="rgb">
+    <div id="rgb">
         <h1>Mude o plano de fundo<span></span></h1>
         <label>red:</label>
         <input type="range" id="rangeRed" value="0" min="0" max="255">
@@ -49,9 +49,10 @@
         <input type="range" id="rangeGreen" value="0" min="0" max="255">
         <label>blue:</label>
         <input type="range" id="rangeBlue" value="0" min="0" max="255">
+        <div id="rgbinput"><div>
     </div>
 
-    <div class="cadastro">
+    <div id="cadastro">
         <h1>Cadastro de nomes</h1>
         <form>
             <label>Nome:</label>

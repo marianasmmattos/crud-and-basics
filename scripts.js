@@ -1,5 +1,4 @@
 window.addEventListener('load', start);
-
 const buttons = [...document.querySelectorAll('button')];
 
 function up (){
@@ -8,11 +7,18 @@ function up (){
 }
 
 buttons.forEach(button => {
-    console.log("for each")
+    const btnRGB = document.querySelector('button.rgb')
+    const btnRT = document.querySelector('button.rt')
+    const btnCRUD = document.querySelector('button.crud')
     button.addEventListener("focus", event => {
-        up(event);        
+        up(event);
+        if (button == btnRGB) {
+            console.log("rgb")
+            document.querySelector('div#rgb').style.transform = 'translateY(-40vh)';
+        }     
     });
 });
+
 
 function regrade3 () {
     const inverso = document.getElementById('inverso');
@@ -35,7 +41,7 @@ function changeColor () {
     const blue = document.getElementById('rangeBlue').value;
     var color = 'rgb(' + red + ',' + green + ',' + blue + ')';
 
-    document.body.style.backgroundColor = color;
+    document.getElementById('rgbinput').style.backgroundColor = color;
     document.getElementById('colorOutput').innerHTML = ':' + color;
 }
 
