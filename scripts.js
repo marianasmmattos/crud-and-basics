@@ -1,19 +1,33 @@
 window.addEventListener('load', start);
 
+const buttons = [...document.querySelectorAll('button')];
+
+function up (){
+    const igti = document.getElementById('igti');
+    igti.style.transform = 'translateY(20%)';
+}
+
+buttons.forEach(button => {
+    console.log("for each")
+    button.addEventListener("focus", event => {
+        up(event);        
+    });
+});
+
 function regrade3 () {
-    const inverso = document.getElementById('inverso')
+    const inverso = document.getElementById('inverso');
 
     const valor1 = document.getElementById('valueone').value;
     const valor2 = document.getElementById('valuetwo"').value;
     const valor3 = document.getElementById('valuethree').value;
 
     if (inverso.checked) {
-        console.log('true')
+        console.log('true');
     }
     else {
-        console.log('else')
+        console.log('else');
     }
-}
+    }
 
 function changeColor () {
     const red = document.getElementById('rangeRed').value;

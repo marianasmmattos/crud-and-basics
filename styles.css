@@ -58,6 +58,11 @@ body {
 #igti {
     transform: translateY(calc(50vh - 50%));
     color: rgba(0, 0, 0, 0.747);
+    transition: 2s;
+}
+
+.up {
+    transform: translateY(0%);
 }
 
 #intro{
