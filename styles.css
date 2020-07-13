@@ -57,6 +57,7 @@ body {
 
 #igti {
     transform: translateY(calc(50vh - 50%));
+    color: rgba(0, 0, 0, 0.747);
 }
 
 #intro{
@@ -119,7 +120,49 @@ body {
     }
 }
 
-#menu,
+#text {
+    cursor: pointer;
+}
+
+#text:hover {
+    color:rgba(255, 255, 255, 0.527);;
+    cursor: pointer;
+}
+
+.menu ul {
+    list-style: none;
+    position: relative;  
+    text-align: center; 
+}
+.menu ul ul {
+    position: absolute;
+    transform: translateX(180%);
+    visibility: hidden;
+}
+.menu ul ul li {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.178);
+}
+.menu ul li:hover ul,
+.menu ul li ul:hover {
+    visibility: visible;
+    position: absolute; 
+    transform: translateX(180%);
+    text-align: center; 
+}
+.menu ul ul button {
+    font-family: "Grenze Gotisch", sans-serif;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    transition: 100ms;
+}
+.menu ul ul button:hover,
+.menu ul ul button:focus {
+    outline-style: none;
+    color: rgba(255, 255, 255, 0.527);
+}
+
+
 .regradetres,
 .rgb,
 .cadastro {
