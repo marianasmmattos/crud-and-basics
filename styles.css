@@ -1,4 +1,133 @@
+:root {
+    --primary-color:#191970b6;
+    --bg-color: #9dd2da;
+    --text-color: #f8f0f5;
+    --light-color: rgba(255, 255, 255, 8.04);
+    --form-bg:  #6c7b8b46;
+    --quad: #63acac49;
+}
 * {
-    padding: 0;
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: "Grenze Gotisch", sans-serif;
+    height: 100%;
+    /* overflow: hidden; */
+}
+html::-webkit-scrollbar { 
+    display: none;
+}
+h1,h2 {
+    font-family: "Fondamento", sans-serif;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;  
+    
+    background: linear-gradient(20deg, #ffdecf, #ba7967, #5e6f64, #3f4441);
+    background-size: 200% 200%;
+    animation: colors 5s ease-in-out infinite;
+}
+
+@keyframes colors {
+    0% {
+        background-position: 0% 50%;
+    } 
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+#content {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#igti {
+    transform: translateY(calc(50vh - 50%));
+}
+
+#intro{
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+}
+
+#intro:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(165, 42, 42, 0.432);
+    transform: translateX(-100%);
+    
+    animation: enLargeBlock .5s .6s both , revealBlock .5s 1.1s both;
+}
+
+@keyframes revealBlock {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(100%);
+    }
+}
+
+@keyframes enLargeBlock {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+#text {
+    text-align: center;
+    opacity: 0;
+    transition: 1s;
+    animation: fadeInText .5s 2s both;
+}
+
+.text {
+    text-align: center;
+    opacity: 0;
+    transition: 2s;
+    animation: fadeInText .5s 1.1s both;
+}
+
+@keyframes fadeInText {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity:1;
+    }
+}
+
+#menu,
+.regradetres,
+.rgb,
+.cadastro {
+    max-width: 500px;
+    width: 100%;
+    padding: 30px;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    transform: translateY(-250vh);
 }

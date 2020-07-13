@@ -1,5 +1,20 @@
 window.addEventListener('load', start);
 
+function regrade3 () {
+    const inverso = document.getElementById('inverso')
+
+    const valor1 = document.getElementById('valueone').value;
+    const valor2 = document.getElementById('valuetwo"').value;
+    const valor3 = document.getElementById('valuethree').value;
+
+    if (inverso.checked) {
+        console.log('true')
+    }
+    else {
+        console.log('else')
+    }
+}
+
 function changeColor () {
     const red = document.getElementById('rangeRed').value;
     const green = document.getElementById('rangeGreen').value;
@@ -56,9 +71,7 @@ function activateInput() {
             isEditing = false;
         }
     }
-
     inputName.addEventListener('keyup', handleTyping);
-    inputName.focus();
 }
 
 function render () {
@@ -112,5 +125,4 @@ function render () {
 
 function clearInput(){
     inputName.value = '';
-    inputName.focus();
 }
