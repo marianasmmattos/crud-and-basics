@@ -1,4 +1,5 @@
 window.addEventListener('load', start);
+
 const buttons = [...document.querySelectorAll('button')];
 
 function up (){
@@ -13,8 +14,19 @@ buttons.forEach(button => {
     button.addEventListener("focus", event => {
         up(event);
         if (button == btnRGB) {
-            console.log("rgb")
             document.querySelector('div#rgb').style.transform = 'translateY(-40vh)';
+            document.querySelector('div#regradetres').style.transform = 'translateY(250vh)';
+            document.querySelector('div#cadastro').style.transform = 'translateY(250vh)';
+        }  
+        if (button == btnRT) {
+            document.querySelector('div#regradetres').style.transform = 'translateY(10vh)';
+            document.querySelector('div#cadastro').style.transform = 'translateY(250vh)';
+            document.querySelector('div#rgb').style.transform = 'translateY(250vh)';
+        }  
+        if (button == btnCRUD) {
+            document.querySelector('div#cadastro').style.transform = 'translateY(-350vh)';
+            document.querySelector('div#rgb').style.transform = 'translateY(250vh)';
+            document.querySelector('div#regradetres').style.transform = 'translateY(250vh)';
         }     
     });
 });

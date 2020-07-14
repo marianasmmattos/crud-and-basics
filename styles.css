@@ -133,7 +133,7 @@ body {
 }
 .menu ul ul {
     position: absolute;
-    transform: translateX(180%);
+    transform: translateX(240%);
     visibility: hidden;
 }
 .menu ul ul li {
@@ -143,7 +143,7 @@ body {
 .menu ul li ul:hover {
     visibility: visible;
     position: absolute; 
-    transform: translateX(180%);
+    transform: translateX(240%);
     text-align: center; 
 }
 .menu ul ul button {
