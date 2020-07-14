@@ -47,7 +47,7 @@ function menu() {
                 document.querySelector('div#rgb').style.transform = 'translateY(250vh)';
             }
             if (button == rgbBGN){
-                document.querySelector('div#rgbBG').style.transform = 'translateY(-360vh)';
+                document.querySelector('div#rgbBG').style.transform = 'translateY(-370vh)';
                 document.querySelector('div#wichrgb').style.transform = 'translateY(250vh)';
             } else {
                 document.querySelector('div#rgbBG').style.transform = 'translateY(250vh)';
@@ -124,8 +124,9 @@ function changeBG() {
     document.getElementById('rgbin4').style.backgroundColor = c4;
     document.getElementById('rgbin4').value = c4;
 
+    document.body.style.animation = 'colors 5s ease-in-out infinite';
+    document.body.style.webkitAnimationPlayState = "running";
     document.body.style.background = 'linear-gradient' + '(' + '20deg' + ',' + c1 + ',' + c2 + ',' + c3 + ',' + c4 + ')';
-    document.body.style.animation = 'colors';
 }
 
 document.getElementById('r1').addEventListener('input', changeBG);
