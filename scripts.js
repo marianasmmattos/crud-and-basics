@@ -60,17 +60,24 @@ function menu() {
 }
 
 function regrade3() {
+    const inverso = document.getElementById('inverso');
+
     const valor1 = document.getElementById('valueone').value;
     const valor2 = document.getElementById('valuetwo').value;
     const valor3 = document.getElementById('valuethree').value;
 
+    if (inverso.checked) {
+        const multiplica = valor1 * valor2;
+        const divide = multiplica / valor3;
+    
+        document.getElementById('valuefour').value = divide;
+
+    } else {
     const multiplica = valor1 * valor3;
-    console.log(multiplica)
     const divide = multiplica / valor2;
-    console.log(divide)
 
     document.getElementById('valuefour').value = divide;
-    console.log(resultado)
+    }
 }
 
 function changeColor() {

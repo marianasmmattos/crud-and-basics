@@ -287,7 +287,7 @@ body {
     justify-content: space-between;
     transform: translateY(250vh);
 
-    transition: 5s;
+    transition: 3s;
 
     border-radius: 10px;
     text-align: center;
@@ -332,6 +332,19 @@ body {
 
 #cadastro #names {
     text-align: left;
+    margin-left: 10px;
+}
+#cadastro #names button {
+    margin-right: 5px;
+    outline-style: none;
+    border: none;
+    background: none;
+    font-size: 16px;
+    color: rgba(160, 15, 15, 0.781);
+}
+
+#cadastro #names button:hover {
+    color: rgba(102, 91, 91, 0.767); 
 }
 
 #cadastro #names ul {
