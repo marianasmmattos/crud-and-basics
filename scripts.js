@@ -30,7 +30,7 @@ function menu() {
                 document.querySelector('div#cadastro').style.transform = 'translateY(250vh)';
             }
             if (button == btnRT) {
-                document.querySelector('div#regradetres').style.transform = 'translateY(10vh)';
+                document.querySelector('div#regradetres').style.transform = 'translateY(15vh)';
                 document.querySelector('div#cadastro').style.transform = 'translateY(250vh)';
                 document.querySelector('div#wichrgb').style.transform = 'translateY(250vh)';
             }
@@ -46,7 +46,7 @@ function menu() {
                 document.querySelector('div#rgb').style.transform = 'translateY(250vh)';
             }
             if (button == rgbBGN){
-                document.querySelector('div#rgbBG').style.transform = 'translateY(-350vh)';
+                document.querySelector('div#rgbBG').style.transform = 'translateY(-360vh)';
                 document.querySelector('div#wichrgb').style.transform = 'translateY(250vh)';
             } else {
                 document.querySelector('div#rgbBG').style.transform = 'translateY(250vh)';
@@ -77,6 +77,7 @@ function changeColor() {
     var color = 'rgb(' + red + ',' + green + ',' + blue + ')';
 
     document.getElementById('rgbinput').style.backgroundColor = color;
+    document.getElementById('rgbinputlabel').value = color;
     //    document.getElementById('colorOutput').innerHTML = ':' + color;
 }
 
@@ -89,24 +90,32 @@ function changeBG() {
     const g1 = document.getElementById('g1').value;
     const b1 = document.getElementById('b1').value;
     const c1 = 'rgb(' + r1 + ',' + g1 + ',' + b1 + ')';
+    document.getElementById('rgbin1').style.backgroundColor = c1;
+    document.getElementById('rgbin1').value = c1;
 
     const r2 = document.getElementById('r2').value;
     const g2 = document.getElementById('g2').value;
     const b2 = document.getElementById('b2').value;
     const c2 = 'rgb(' + r2 + ',' + g2 + ',' + b2 + ')';
+    document.getElementById('rgbin2').style.backgroundColor = c2;
+    document.getElementById('rgbin2').value = c2;
 
     const r3 = document.getElementById('r3').value;
     const g3 = document.getElementById('g3').value;
     const b3 = document.getElementById('b3').value;
     const c3 = 'rgb(' + r3 + ',' + g3 + ',' + b3 + ')';
+    document.getElementById('rgbin3').style.backgroundColor = c3;
+    document.getElementById('rgbin3').value = c3;
 
     const r4 = document.getElementById('r4').value;
     const g4 = document.getElementById('g4').value;
     const b4 = document.getElementById('b4').value;
     const c4 = 'rgb(' + r4 + ',' + g4 + ',' + b4 + ')';
+    document.getElementById('rgbin4').style.backgroundColor = c4;
+    document.getElementById('rgbin4').value = c4;
 
     document.body.style.background = 'linear-gradient' + '(' + '20deg' + ',' + c1 + ',' + c2 + ',' + c3 + ',' + c4 + ')';
-    console.log(document.body)
+    document.body.style.animation = 'colors 5s ease-in-out infinite';
 }
 
 document.getElementById('r1').addEventListener('input', changeBG);
