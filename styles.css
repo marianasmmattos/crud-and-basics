@@ -160,7 +160,6 @@ body {
 }
 
 #regradetres,
-#cadastro,
 #rgb {
     max-width: 500px;
     width: 100%;
@@ -176,6 +175,31 @@ body {
 
     background-color: rgba(255, 255, 255, 0.171);
 }
+
+#cadastro {
+    min-width: 500px;
+    padding: 30px;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    transform: translateY(250vh);
+    transition: 3s;
+
+    border-radius: 10px;
+    text-align: center;
+
+    background-color: rgba(255, 255, 255, 0.171);
+}
+
+
+#cadastro #names {
+    text-align: left;
+}
+
+#cadastro #names ul {
+    list-style: none;
+}
+
 
 #rgbinput{
     width: 70px;
