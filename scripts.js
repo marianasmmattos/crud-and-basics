@@ -115,7 +115,7 @@ function changeBG() {
     document.getElementById('rgbin4').value = c4;
 
     document.body.style.background = 'linear-gradient' + '(' + '20deg' + ',' + c1 + ',' + c2 + ',' + c3 + ',' + c4 + ')';
-    document.body.style.animation = 'colors 5s ease-in-out infinite';
+    document.body.style.animation = 'colors';
 }
 
 document.getElementById('r1').addEventListener('input', changeBG);
@@ -130,7 +130,7 @@ document.getElementById('r4').addEventListener('input', changeBG);
 document.getElementById('g4').addEventListener('input', changeBG);
 document.getElementById('b4').addEventListener('input', changeBG);
 
-var globalNames = ['um', 'dois', 'três', 'quatro'];
+var globalNames = ['Mariana Mattos', 'Adicione com a tecla enter', 'Exclua apertando o botão', 'Edite ao clicar no texto'];
 var inputName = document.getElementById('inputName');
 var isEditing = false;
 var currentIndex = null;

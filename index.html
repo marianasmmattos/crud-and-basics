@@ -28,16 +28,30 @@
     </div>
 
     <div id="regradetres">
-        <h1>Calculadora de Regra de Três Simples</h1>
-        <input type="checkbox" id="inverso"><label>Inversamente proporcional</label>
-        <label>Primeiro valor</label>
-        <input id="valueone">
-        <label>Segundo valor</label>
-        <input id="valuetwo">
-        <label>Terceiro valor</label>
-        <input id="valuethree">
-        <label>Valor a ser descoberto</label>
-        <input id="valuefour">
+        <h1>Regra de Três Simples</h1>
+        <br/>
+        <label id="inversa"><input type="checkbox" id="inverso">Inversamente proporcional</label>
+        <br/>
+        <div id="intvalue">
+            <section>
+                <label>Primeiro valor</label>
+                <input id="valueone">
+            </section>
+            <section>
+                <label>Segundo valor</label>
+                <input id="valuetwo">
+            </section>
+            <section>
+                 <label>Terceiro valor</label>
+                <input id="valuethree">
+            </section>
+            <section>
+                <label>Valor a ser descoberto</label>
+                <input id="valuefour" disabled>
+            </section>
+        </div>
+        <br/>
+        <button id="send">Resultado</button>
     </div>
 
     <div id="cadastro">

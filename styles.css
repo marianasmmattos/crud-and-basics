@@ -181,6 +181,50 @@ body {
     background-color: rgba(255, 255, 255, 0.171);
 }
 
+#intvalue {
+    max-width: 500px;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+#intvalue input {
+    font-size: 18px;
+    padding:5px;
+    font-family: "Grenze Gotisch", sans-serif;
+    align-self: center;
+    border-radius: 10px;
+    border: transparent;
+    cursor: pointer;
+
+    outline-style: none;
+    background-color:rgba(216, 216, 216, 0.678)
+
+}
+
+#inverso {
+    margin-right: 5px;
+}
+
+#send {
+    width: 80px;
+    height: 30px;
+
+    font-size: 16px;
+    font-family: "Grenze Gotisch", sans-serif;
+    align-self: center;
+    border: none;
+    cursor:pointer;
+
+    outline-style: none;
+    background-color:rgb(255, 255, 255, 0.178)
+}
+
+#send:hover {
+    color: rgba(255, 255, 255, 0.527) ;
+    background-color:rgb(255, 255, 255, 0.178) 
+}
+
 #rgbBG {
     min-width: 515px;
     padding: 30px;
@@ -258,12 +302,6 @@ body {
     color: rgba(0, 0, 0, 0.616);
     cursor: pointer;
 }
-
-/*#rgbGerator::after {
-    content: "";
-    padding: 5px;
-    border-right: 1px solid rgba(255, 255, 255, 0.527);
-}*/
 
 #wichrgb h2:hover {
     color: rgba(255, 255, 255, 0.527);
