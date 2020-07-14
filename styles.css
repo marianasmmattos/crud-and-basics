@@ -188,18 +188,21 @@ body {
     grid-template-rows: 1fr 1fr;
 }
 
-#intvalue input {
+#intvalue input,
+#inputName {
     font-size: 18px;
+    width: 80%;
     padding:5px;
+    margin: 5px;
     font-family: "Grenze Gotisch", sans-serif;
+    text-align: center;
     align-self: center;
     border-radius: 10px;
     border: transparent;
     cursor: pointer;
 
     outline-style: none;
-    background-color:rgba(216, 216, 216, 0.678)
-
+    background-color:rgba(216, 216, 216, 0.678);
 }
 
 #inverso {

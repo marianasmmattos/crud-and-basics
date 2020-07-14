@@ -21,6 +21,7 @@ function menu() {
         const btnCRUD = document.querySelector('button.crud')
         const rgbEX = document.querySelector('button.rgbGerator');
         const rgbBGN = document.querySelector('button.rgbBGchange');
+        const send = document.querySelector('button#send');
         
         button.addEventListener("focus", event => {
             up(event);
@@ -51,23 +52,25 @@ function menu() {
             } else {
                 document.querySelector('div#rgbBG').style.transform = 'translateY(250vh)';
             }
+            if (button == send) {
+                regrade3();
+            }
         });
     });
 }
 
 function regrade3() {
-    const inverso = document.getElementById('inverso');
-
     const valor1 = document.getElementById('valueone').value;
-    const valor2 = document.getElementById('valuetwo"').value;
+    const valor2 = document.getElementById('valuetwo').value;
     const valor3 = document.getElementById('valuethree').value;
 
-    if (inverso.checked) {
-        console.log('true');
-    }
-    else {
-        console.log('else');
-    }
+    const multiplica = valor1 * valor3;
+    console.log(multiplica)
+    const divide = multiplica / valor2;
+    console.log(divide)
+
+    document.getElementById('valuefour').value = divide;
+    console.log(resultado)
 }
 
 function changeColor() {
