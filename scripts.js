@@ -1,10 +1,10 @@
 window.addEventListener('load', start);
 
 function start() {
+    render();
     preventFormSubmit();
     activateInput();
     menu();
-    render();
 }
 
 function menu() {
@@ -124,8 +124,6 @@ function changeBG() {
     document.getElementById('rgbin4').style.backgroundColor = c4;
     document.getElementById('rgbin4').value = c4;
 
-    document.body.style.animation = 'colors 5s ease-in-out infinite';
-    document.body.style.webkitAnimationPlayState = "running";
     document.body.style.background = 'linear-gradient' + '(' + '20deg' + ',' + c1 + ',' + c2 + ',' + c3 + ',' + c4 + ')';
 }
 

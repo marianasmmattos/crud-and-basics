@@ -16,8 +16,6 @@ h1,h2 {
     font-family: "Fondamento", sans-serif;
 }
 body {
-    animation: colors 5s ease-in-out infinite;
-
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -27,18 +25,6 @@ body {
 
     background: linear-gradient(20deg, #ffdecf, #ba7967, #5e6f64, #3f4441);
     background-size: 200% 200%;
-}
-
-@keyframes colors {
-    0% {
-        background-position: 0% 50%;
-    } 
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
 }
 
 #content {
