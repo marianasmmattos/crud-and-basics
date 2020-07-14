@@ -22,7 +22,7 @@ body {
     justify-content: center;
     height: 100vh;
     width: 100vw;  
-    
+
     background: linear-gradient(20deg, #ffdecf, #ba7967, #5e6f64, #3f4441);
     background-size: 200% 200%;
     animation: colors 5s ease-in-out infinite;
@@ -42,6 +42,7 @@ body {
 
 #content {
     height: 100vh;
+    width: 100vw;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -122,7 +123,7 @@ body {
 }
 
 #text:hover {
-    color:rgba(255, 255, 255, 0.527);;
+    color:rgba(255, 255, 255, 0.527);
     cursor: pointer;
 }
 
@@ -159,6 +160,22 @@ body {
     color: rgba(255, 255, 255, 0.527);
 }
 
+#rgbBG {
+    min-width: 500px;
+    padding: 30px;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+
+    transform: translateY(150vh);
+    transition: 3s;
+
+    border-radius: 10px;
+    text-align: center;
+
+    background-color: rgba(255, 255, 255, 0.171);
+}
+
 #regradetres,
 #rgb {
     max-width: 500px;
@@ -176,6 +193,85 @@ body {
     background-color: rgba(255, 255, 255, 0.171);
 }
 
+#rgbBG .rgb1,
+#rgbBG .rgb2,
+#rgbBG .rgb3,
+#rgbBG .rgb4 {
+    max-width: 300px;
+    max-height: 80px;
+    text-align: center;
+    font-size: 14px;
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    margin-top: 10px;
+}
+
+/* #rgbinputgb {
+    max-width: 300px;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+#rgbinput1,
+#rgbinput2,
+#rgbinput3,
+#rgbinput4 {
+    margin-top: 10px;
+    width: 70px;
+    height: 70px;
+    border-radius: 80%;
+
+    background-color: rgba(255, 255, 255, 0.705);
+} */
+
+#wichrgb {
+    max-width: 400px;
+    width: 100%;
+    padding: 30px;
+    display: flex;
+    position: relative;
+    flex-direction: row ;
+    justify-content: space-between;
+    transform: translateY(250vh);
+
+    transition: 5s;
+
+    border-radius: 10px;
+    text-align: center;
+
+    background-color: rgba(255, 255, 255, 0.171);
+}
+
+#wichrgb button {
+    background-color: transparent;
+    border: none;
+    outline-style: none;
+}
+
+#wichrgb h2 {
+    color: rgba(0, 0, 0, 0.616);
+    cursor: pointer;
+}
+
+/*#rgbGerator::after {
+    content: "";
+    padding: 5px;
+    border-right: 1px solid rgba(255, 255, 255, 0.527);
+}*/
+
+#wichrgb h2:hover {
+    color: rgba(255, 255, 255, 0.527);
+    cursor: pointer;
+}
+#wichrgb h2:focus {
+    color: rgba(255, 255, 255, 0.527);
+    cursor: pointer;
+}
+
 #cadastro {
     min-width: 500px;
     padding: 30px;
@@ -190,7 +286,6 @@ body {
 
     background-color: rgba(255, 255, 255, 0.171);
 }
-
 
 #cadastro #names {
     text-align: left;

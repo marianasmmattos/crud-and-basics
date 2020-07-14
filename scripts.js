@@ -3,8 +3,8 @@ window.addEventListener('load', start);
 function start() {
     preventFormSubmit();
     activateInput();
-    render();
     menu();
+    render();
 }
 
 function menu() {
@@ -16,30 +16,44 @@ function menu() {
     }
 
     buttons.forEach(button => {
-        const btnRGB = document.querySelector('button.rgb')
+        const btnRGB = document.querySelector('button.coresrgb')
         const btnRT = document.querySelector('button.rt')
         const btnCRUD = document.querySelector('button.crud')
+        const rgbEX = document.querySelector('button.rgbGerator');
+        const rgbBGN = document.querySelector('button.rgbBGchange');
+        
         button.addEventListener("focus", event => {
             up(event);
             if (button == btnRGB) {
-                document.querySelector('div#rgb').style.transform = 'translateY(-75vh)';
+                document.querySelector('div#wichrgb').style.transform = 'translateY(-75vh)';
                 document.querySelector('div#regradetres').style.transform = 'translateY(250vh)';
                 document.querySelector('div#cadastro').style.transform = 'translateY(250vh)';
             }
             if (button == btnRT) {
                 document.querySelector('div#regradetres').style.transform = 'translateY(10vh)';
                 document.querySelector('div#cadastro').style.transform = 'translateY(250vh)';
-                document.querySelector('div#rgb').style.transform = 'translateY(250vh)';
+                document.querySelector('div#wichrgb').style.transform = 'translateY(250vh)';
             }
             if (button == btnCRUD) {
                 document.querySelector('div#cadastro').style.transform = 'translateY(-40vh)';
-                document.querySelector('div#rgb').style.transform = 'translateY(250vh)';
+                document.querySelector('div#wichrgb').style.transform = 'translateY(250vh)';
                 document.querySelector('div#regradetres').style.transform = 'translateY(250vh)';
+            }
+            if (button == rgbEX){
+                document.querySelector('div#rgb').style.transform ='translateY(-80vh)';
+                document.querySelector('div#wichrgb').style.transform = 'translateY(250vh)';
+            } else {
+                document.querySelector('div#rgb').style.transform = 'translateY(250vh)';
+            }
+            if (button == rgbBGN){
+                document.querySelector('div#rgbBG').style.transform = 'translateY(-350vh)';
+                document.querySelector('div#wichrgb').style.transform = 'translateY(250vh)';
+            } else {
+                document.querySelector('div#rgbBG').style.transform = 'translateY(250vh)';
             }
         });
     });
 }
-
 
 function regrade3() {
     const inverso = document.getElementById('inverso');
@@ -63,12 +77,49 @@ function changeColor() {
     var color = 'rgb(' + red + ',' + green + ',' + blue + ')';
 
     document.getElementById('rgbinput').style.backgroundColor = color;
-    document.getElementById('colorOutput').innerHTML = ':' + color;
+    //    document.getElementById('colorOutput').innerHTML = ':' + color;
 }
 
 document.getElementById('rangeRed').addEventListener('input', changeColor);
 document.getElementById('rangeGreen').addEventListener('input', changeColor);
 document.getElementById('rangeBlue').addEventListener('input', changeColor);
+
+function changeBG() {
+    const r1 = document.getElementById('r1').value;
+    const g1 = document.getElementById('g1').value;
+    const b1 = document.getElementById('b1').value;
+    const c1 = 'rgb(' + r1 + ',' + g1 + ',' + b1 + ')';
+
+    const r2 = document.getElementById('r2').value;
+    const g2 = document.getElementById('g2').value;
+    const b2 = document.getElementById('b2').value;
+    const c2 = 'rgb(' + r2 + ',' + g2 + ',' + b2 + ')';
+
+    const r3 = document.getElementById('r3').value;
+    const g3 = document.getElementById('g3').value;
+    const b3 = document.getElementById('b3').value;
+    const c3 = 'rgb(' + r3 + ',' + g3 + ',' + b3 + ')';
+
+    const r4 = document.getElementById('r4').value;
+    const g4 = document.getElementById('g4').value;
+    const b4 = document.getElementById('b4').value;
+    const c4 = 'rgb(' + r4 + ',' + g4 + ',' + b4 + ')';
+
+    document.body.style.background = 'linear-gradient' + '(' + '20deg' + ',' + c1 + ',' + c2 + ',' + c3 + ',' + c4 + ')';
+    console.log(document.body)
+}
+
+document.getElementById('r1').addEventListener('input', changeBG);
+document.getElementById('g1').addEventListener('input', changeBG);
+document.getElementById('b1').addEventListener('input', changeBG);
+document.getElementById('r2').addEventListener('input', changeBG);
+document.getElementById('g2').addEventListener('input', changeBG);
+document.getElementById('b2').addEventListener('input', changeBG);
+document.getElementById('r3').addEventListener('input', changeBG);
+document.getElementById('g3').addEventListener('input', changeBG);
+document.getElementById('r4').addEventListener('input', changeBG);
+document.getElementById('g4').addEventListener('input', changeBG);
+document.getElementById('b4').addEventListener('input', changeBG);
 
 var globalNames = ['um', 'dois', 'três', 'quatro'];
 var inputName = document.getElementById('inputName');

@@ -19,7 +19,7 @@
                 <li><h2 id="text">Módulo 01</h2>
                     <ul>
                         <li><button class="rt">Regra de três</button></li>
-                        <li><button class="rgb">Cores RGB</button></li>
+                        <li><button class="coresrgb">Cores RGB</button></li>
                         <li><button class="crud">Lista CRUD</button></li>
                     </ul>
                  </li>
@@ -50,8 +50,13 @@
         <div id="names"></div>
     </div>
 
+    <div id="wichrgb">
+        <button class="rgbGerator"><h2 id="rgbGerator">Gerador de RGB</h2></button>
+        <button class="rgbBGchange"><h2 id="rgbBGchange">RGB no background</h2></button>
+    </div>
+
     <div id="rgb">
-        <h1>Mude o plano de fundo<span></span></h1>
+        <h1>Gerador de RGB<span></span></h1>
         <label>red:</label>
         <input type="range" id="rangeRed" value="0" min="0" max="255">
         <label>green:</label>
@@ -59,6 +64,52 @@
         <label>blue:</label>
         <input type="range" id="rangeBlue" value="0" min="0" max="255">
         <div id="rgbinput"><div>
+    </div>
+
+    <div id="rgbBG" class="rgbBG">
+        <h1>Mude o plano de fundo<span></span></h1>
+        <div class="rgb1" id="rgb1">
+            <label>red:</label>
+            <input type="range" class="rgb" id="r1" value="255" min="0" max="255">
+            <label>green:</label>
+            <input type="range" class="rgb" id="g1"  value="222" min="0" max="255">
+            <label>blue:</label>
+            <input type="range" class="rgb" id="b1" value="207" min="0" max="255">
+        </div>
+        <div class="rgb2" id="rgb2">
+            <label>red:</label>
+            <input type="range" class="rgb" id="r2" value="186" min="0" max="255">
+            <label>green:</label>
+            <input type="range" class="rgb"  id="g2" value="121" min="0" max="255">
+            <label>blue:</label>
+            <input type="range" class="rgb" id="b2" value="103" min="0" max="255">
+        </div>
+           <div class="rgb3" id="rgb3">
+            <label>red:</label>
+            <input type="range" class="rgb" id="r3" value="94" min="0" max="255">
+            <label>green:</label>
+            <input type="range" class="rgb" id="g3" value="111" min="0" max="255">
+            <label>blue:</label>
+            <input type="range" class="rgb3" id="b3" value="100" min="0" max="255">
+        </div>
+        <div class="rgb3" id="rgb4">
+            <label>red:</label>
+            <input type="range" class="rgb" id="r4" value="63" min="0" max="255">
+            <label>green:</label>
+            <input type="range" class="rgb" id="g4" value="68" min="0" max="255">
+            <label>blue:</label>
+            <input type="range" class="rgb" id="b4" value="65" min="0" max="255">
+        </div>
+        <div id="rgbinputbg">
+             <div id="rgbinput1">
+             <div>
+             <div id="rgbinput2">
+             <div>   
+             <div id="rgbinput3">
+             <div>
+             <div id="rgbinput2">
+             <div> 
+        </div>     
     </div>
 
 </div>
