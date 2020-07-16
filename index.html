@@ -72,20 +72,7 @@
         <button class="rgbBGchange"><h2 id="rgbBGchange">RGB no background</h2></button>
     </div>
 
-    <div id="rgb">
-        <h1>Gerador de RGB<span></span></h1>
-        <label>red:</label>
-        <input type="range" id="rangeRed" value="0" min="0" max="255">
-        <label>green:</label>
-        <input type="range" id="rangeGreen" value="0" min="0" max="255">
-        <label>blue:</label>
-        <input type="range" id="rangeBlue" value="0" min="0" max="255">
-        <div id="rgbinput">
-        <label id="rgbinputlabel"></label>
-        <div>
-    </div>
-
-    <div id="rgbBG" class="rgbBG">
+    <div id="rgbBG">
         <h1>Mude o plano de fundo<span></span></h1>
         <div class="rgb1" id="rgb1">
             <label>red:</label>
@@ -119,12 +106,37 @@
             <label>blue:</label>
             <input type="range" class="rgb" id="b4" value="65" min="0" max="255">
         </div>
-        <div id="rgbinputbg">
+        <div id="rgbinputbg" class="rgbinputbg">
+            <div class="rgblab">
             <input type="text" id="rgbin1" disabled>
+            <label id="rgblab1"></label>
+            </div>
+            <div class="rgblab">
             <input type="text" id="rgbin2" disabled>
+            <label id="rgblab2"></label>
+            </div>
+            <div class="rgblab">
             <input type="text" id="rgbin3" disabled>
+            <label id="rgblab3"></label>
+            </div>
+            <div class="rgblab">
             <input type="text" id="rgbin4" disabled>
+            <label id="rgblab4"></label>
+            </div>
         </div>     
+
+        <div id="rgb">
+        <h1>Gerador de RGB<span></span></h1>
+        <label>red:</label>
+        <input type="range" id="rangeRed" value="0" min="0" max="255">
+        <label>green:</label>
+        <input type="range" id="rangeGreen" value="0" min="0" max="255">
+        <label>blue:</label>
+        <input type="range" id="rangeBlue" value="0" min="0" max="255">
+        <div id="rgbinput">
+        <label id="rgbinputlabel"></label>
+        <div>
+    </div>
     </div>
 
 </div>
