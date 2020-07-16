@@ -150,7 +150,7 @@ body {
 
 #rgbBG {
     max-width: 500px;
-    max-height: 300px;
+    max-height: 320px;
 
     padding: 30px;
     display: flex;
@@ -305,9 +305,9 @@ body {
     margin-right: 5px;
 }
 
-#send {
+#send,
+#random {
     width: 80px;
-    height: 30px;
 
     font-size: 16px;
     font-family: "Grenze Gotisch", sans-serif;
@@ -319,7 +319,8 @@ body {
     background-color:rgb(255, 255, 255, 0.178)
 }
 
-#send:hover {
+#send:hover,
+#random:hover {
     color: rgba(255, 255, 255, 0.527) ;
     background-color:rgb(255, 255, 255, 0.178) 
 }

@@ -46,7 +46,7 @@ function menu() {
             } else {
                 document.querySelector('div#rgb').style.transform = 'translateY(250vh)';
             }
-            if (button == rgbBGN){
+            if (button == rgbBGN || random){
                 document.querySelector('div#rgbBG').style.transform = 'translateY(-100vh)';
                 document.querySelector('div#wichrgb').style.transform = 'translateY(250vh)';
             } else {
@@ -54,6 +54,9 @@ function menu() {
             }
             if (button == send) {
                 regrade3();
+            }
+            if (button == random) {
+                randomBG();
             }
         });
     });
@@ -138,6 +141,45 @@ document.getElementById('g3').addEventListener('input', changeBG);
 document.getElementById('r4').addEventListener('input', changeBG);
 document.getElementById('g4').addEventListener('input', changeBG);
 document.getElementById('b4').addEventListener('input', changeBG);
+
+function randomBG() {
+    const random = (min, max) => Math.random() * (max - min) + min;
+    
+    var r1 = random(0,255);
+    var r2 = random(0,255);
+    var r3 = random(0,255);
+    var r4 = random(0,255);
+    var g1 = random(0,255);
+    var g2 = random(0,255);
+    var g3 = random(0,255);
+    var g4 = random(0,255);
+    var b1 = random(0,255);
+    var b2 = random(0,255);
+    var b3 = random(0,255);
+    var b4 = random(0,255);
+
+    const c1 = 'rgb(' + r1 + ',' + g1 + ',' + b1 + ')';
+    const sc1 = 'rgb(' + parseInt(r1) + ',' + parseInt(g1) + ',' + parseInt(b1) + ')';
+    document.getElementById('rgbin1').style.backgroundColor = c1;
+    document.getElementById('rgblab1').textContent = sc1;
+
+    const c2 = 'rgb(' + r2 + ',' + g2 + ',' + b2 + ')';
+    const sc2 = 'rgb(' + parseInt(r2) + ',' + parseInt(g2) + ',' + parseInt(b2) + ')';
+    document.getElementById('rgbin2').style.backgroundColor = c2;
+    document.getElementById('rgblab2').textContent = sc2;
+
+    const c3 = 'rgb(' + r3 + ',' + g3 + ',' + b3 + ')';
+    const sc3 = 'rgb(' + parseInt(r3) + ',' + parseInt(g3) + ',' + parseInt(b3) + ')';
+    document.getElementById('rgbin3').style.backgroundColor = c3;
+    document.getElementById('rgblab3').textContent = sc3;
+
+    const c4 = 'rgb(' + r4 + ',' + g4 + ',' + b4 + ')';
+    const sc4 = 'rgb(' + parseInt(r4) + ',' + parseInt(g4) + ',' + parseInt(b4) + ')';
+    document.getElementById('rgbin4').style.backgroundColor = c4;
+    document.getElementById('rgblab4').textContent = sc4;
+
+    document.body.style.background = 'linear-gradient' + '(' + '20deg' + ',' + c1 + ',' + c2 + ',' + c3 + ',' + c4 + ')';  
+}
 
 var globalNames = ['Mariana Mattos', 'Adicione com a tecla enter', 'Exclua apertando o botão', 'Edite ao clicar no texto'];
 var inputName = document.getElementById('inputName');
