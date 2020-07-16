@@ -46,7 +46,7 @@ function menu() {
             } else {
                 document.querySelector('div#rgb').style.transform = 'translateY(250vh)';
             }
-            if (button == rgbBGN || random){
+            if (button == rgbBGN){
                 document.querySelector('div#rgbBG').style.transform = 'translateY(-100vh)';
                 document.querySelector('div#wichrgb').style.transform = 'translateY(250vh)';
             } else {
@@ -57,6 +57,10 @@ function menu() {
             }
             if (button == random) {
                 randomBG();
+                document.querySelector('div#rgbBG').style.transform = 'translateY(-100vh)';
+                document.querySelector('div#cadastro').style.transform = 'translateY(250vh)';
+                document.querySelector('div#wichrgb').style.transform = 'translateY(250vh)';
+                document.querySelector('div#regradetres').style.transform = 'translateY(250vh)';
             }
         });
     });
