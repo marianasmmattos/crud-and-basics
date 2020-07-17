@@ -1,13 +1,13 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
 html {
     font-family: "Grenze Gotisch", sans-serif;
     height: 100%;
     overflow: hidden;
+    box-sizing: border-box;
 }
 html::-webkit-scrollbar { 
     display: none;
@@ -150,7 +150,7 @@ body {
 
 #rgbBG {
     max-width: 500px;
-    max-height: 320px;
+    max-height: 270px;
 
     padding: 30px;
     display: flex;
@@ -218,6 +218,22 @@ body {
     border-radius: 80%;
     border: transparent
 } 
+
+#rgbin1{
+    background-color: #ffdecf;
+}
+
+#rgbin2{
+    background-color: #ba7967;
+}
+
+#rgbin3{
+    background-color: #5e6f64;
+}
+
+#rgbin4{
+    background-color: #5e6f64;
+}
 
 #wichrgb {
     max-width: 400px;
@@ -322,7 +338,8 @@ body {
 #send:hover,
 #random:hover {
     color: rgba(255, 255, 255, 0.527) ;
-    background-color:rgb(255, 255, 255, 0.178) 
+    background-color:rgb(255, 255, 255, 0.178);
+    align-self: center;
 }
 
 

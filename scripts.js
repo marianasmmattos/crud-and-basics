@@ -23,7 +23,7 @@ function menu() {
         const rgbBGN = document.querySelector('button.rgbBGchange');
         const send = document.querySelector('button#send');
         
-        button.addEventListener("focus", event => {
+        button.addEventListener("click", event => {
             up(event);
             if (button == btnRGB) {
                 document.querySelector('div#wichrgb').style.transform = 'translateY(-75vh)';
@@ -166,21 +166,33 @@ function randomBG() {
     const sc1 = 'rgb(' + parseInt(r1) + ',' + parseInt(g1) + ',' + parseInt(b1) + ')';
     document.getElementById('rgbin1').style.backgroundColor = c1;
     document.getElementById('rgblab1').textContent = sc1;
+    document.getElementById('r1').value = r1;
+    document.getElementById('g1').value = g1;
+    document.getElementById('b1').value = b1;
 
     const c2 = 'rgb(' + r2 + ',' + g2 + ',' + b2 + ')';
     const sc2 = 'rgb(' + parseInt(r2) + ',' + parseInt(g2) + ',' + parseInt(b2) + ')';
     document.getElementById('rgbin2').style.backgroundColor = c2;
     document.getElementById('rgblab2').textContent = sc2;
-
+    document.getElementById('r2').value = r2;
+    document.getElementById('g2').value = g2;
+    document.getElementById('b2').value = b2;
+    
     const c3 = 'rgb(' + r3 + ',' + g3 + ',' + b3 + ')';
     const sc3 = 'rgb(' + parseInt(r3) + ',' + parseInt(g3) + ',' + parseInt(b3) + ')';
     document.getElementById('rgbin3').style.backgroundColor = c3;
     document.getElementById('rgblab3').textContent = sc3;
+    document.getElementById('r3').value = r3;
+    document.getElementById('g3').value = g3;
+    document.getElementById('b3').value = b3;
 
     const c4 = 'rgb(' + r4 + ',' + g4 + ',' + b4 + ')';
     const sc4 = 'rgb(' + parseInt(r4) + ',' + parseInt(g4) + ',' + parseInt(b4) + ')';
     document.getElementById('rgbin4').style.backgroundColor = c4;
     document.getElementById('rgblab4').textContent = sc4;
+    document.getElementById('r4').value = r4;
+    document.getElementById('g4').value = g4;
+    document.getElementById('b4').value = b4;
 
     document.body.style.background = 'linear-gradient' + '(' + '20deg' + ',' + c1 + ',' + c2 + ',' + c3 + ',' + c4 + ')';  
 }
