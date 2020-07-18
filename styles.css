@@ -3,27 +3,31 @@
     padding: 0;
 }
 
-#rgbBG,
-#wichrgb,
-#regradetres,
-#rgb,
-#cadastro {
-    transform: translateY(150vh);
-}
-
 html {
     font-family: "Grenze Gotisch", sans-serif;
     height: 100%;
-    overflow: hidden;
+/*    overflow: hidden; */
     box-sizing: border-box;
 }
 html::-webkit-scrollbar { 
     display: none;
 }
+#rgbBG,
+#wichrgb,
+#regradetres,
+#rgb,
+#cadastro {
+    transform: translateY(100vh);
+}
 h1,h2 {
     font-family: "Fondamento", sans-serif;
 }
 body {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -37,22 +41,18 @@ body {
 }
 
 #content {
-    height: 100vh;
-    width: 100vw;
+    height: 100%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 #igti {
-    transform: translateY(calc(50vh - 50%));
+    transform: translateY(50vh);
     color: rgba(0, 0, 0, 0.747);
     transition: 2s;
     background: transparent;
-}
-
-.up {
-    transform: translateY(0%);
 }
 
 #intro{
@@ -290,7 +290,6 @@ body {
 
     justify-content: center;
 
-    transform: translateY(250vh);
     transition: 3s;
 
     border-radius: 10px;
@@ -355,7 +354,7 @@ body {
     display: flex;
     position: relative;
     flex-direction: column;
-    transform: translateY(250vh);
+
     transition: 3s;
 
     border-radius: 10px;

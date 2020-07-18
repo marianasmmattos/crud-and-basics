@@ -1,19 +1,16 @@
-window.addEventListener('load', start);
+document.addEventListener('DOMContentLoaded', start);
 
 function start() {
     render();
     preventFormSubmit();
     activateInput();
     menu();
+    console.log('carregou o start');
 }
 
 function menu() {
     const buttons = [...document.querySelectorAll('button')];
-
-    function up() {
-        const igti = document.getElementById('igti');
-        igti.style.transform = 'translateY(20%)';
-    }
+    console.log('clicou no menu')
 
     buttons.forEach(button => {
         const btnRGB = document.querySelector('button.coresrgb')
@@ -24,43 +21,46 @@ function menu() {
         const send = document.querySelector('button#send');
         
         button.addEventListener("click", event => {
-            up(event);
+
+            const igti = document.getElementById('igti');
+            igti.style.transform = 'translateY(20%)';
+
             if (button == btnRGB) {
-                document.querySelector('div#wichrgb').style.transform = 'translateY(-75vh)';
-                document.querySelector('div#regradetres').style.transform = 'translateY(250vh)';
-                document.querySelector('div#cadastro').style.transform = 'translateY(250vh)';
+                document.querySelector('div#wichrgb').style.transform = 'translateY(-40vh)';
+                document.querySelector('div#regradetres').style.transform = 'translateY(100vh)';
+                document.querySelector('div#cadastro').style.transform = 'translateY(100vh)';
             }
             if (button == btnRT) {
                 document.querySelector('div#regradetres').style.transform = 'translateY(15vh)';
-                document.querySelector('div#cadastro').style.transform = 'translateY(250vh)';
-                document.querySelector('div#wichrgb').style.transform = 'translateY(250vh)';
+                document.querySelector('div#cadastro').style.transform = 'translateY(100vh)';
+                document.querySelector('div#wichrgb').style.transform = 'translateY(100vh)';
             }
             if (button == btnCRUD) {
-                document.querySelector('div#cadastro').style.transform = 'translateY(-40vh)';
-                document.querySelector('div#wichrgb').style.transform = 'translateY(250vh)';
-                document.querySelector('div#regradetres').style.transform = 'translateY(250vh)';
+                document.querySelector('div#cadastro').style.transform = 'translateY(-20vh)';
+                document.querySelector('div#wichrgb').style.transform = 'translateY(100vh)';
+                document.querySelector('div#regradetres').style.transform = 'translateY(100vh)';
             }
             if (button == rgbEX){
-                document.querySelector('div#rgb').style.transform ='translateY(-80vh)';
-                document.querySelector('div#wichrgb').style.transform = 'translateY(250vh)';
+                document.querySelector('div#rgb').style.transform ='translateY(120vh)';
+                document.querySelector('div#wichrgb').style.transform = 'translateY(100vh)';
             } else {
-                document.querySelector('div#rgb').style.transform = 'translateY(250vh)';
+                document.querySelector('div#rgb').style.transform = 'translateY(100vh)';
             }
             if (button == rgbBGN){
-                document.querySelector('div#rgbBG').style.transform = 'translateY(-100vh)';
-                document.querySelector('div#wichrgb').style.transform = 'translateY(250vh)';
+                document.querySelector('div#rgbBG').style.transform = 'translateY(-50vh)';
+                document.querySelector('div#wichrgb').style.transform = 'translateY(100vh)';
             } else {
-                document.querySelector('div#rgbBG').style.transform = 'translateY(250vh)';
+                document.querySelector('div#rgbBG').style.transform = 'translateY(100vh)';
             }
             if (button == send) {
                 regrade3();
             }
             if (button == random) {
                 randomBG();
-                document.querySelector('div#rgbBG').style.transform = 'translateY(-100vh)';
-                document.querySelector('div#cadastro').style.transform = 'translateY(250vh)';
-                document.querySelector('div#wichrgb').style.transform = 'translateY(250vh)';
-                document.querySelector('div#regradetres').style.transform = 'translateY(250vh)';
+                document.querySelector('div#rgbBG').style.transform = 'translateY(-50vh)';
+                document.querySelector('div#cadastro').style.transform = 'translateY(100vh)';
+                document.querySelector('div#wichrgb').style.transform = 'translateY(100vh)';
+                document.querySelector('div#regradetres').style.transform = 'translateY(100vh)';
             }
         });
     });
@@ -85,6 +85,7 @@ function regrade3() {
 
     document.getElementById('valuefour').value = divide;
     }
+    console.log('entrou na regra de 3');
 }
 
 function changeColor() {
@@ -96,6 +97,7 @@ function changeColor() {
     document.getElementById('rgbinput').style.backgroundColor = color;
     document.getElementById('rgbinputlabel').value = color;
     //    document.getElementById('colorOutput').innerHTML = ':' + color;
+    console.log('changeColo');
 }
 
 document.getElementById('rangeRed').addEventListener('input', changeColor);
@@ -132,6 +134,8 @@ function changeBG() {
     document.getElementById('rgblab4').textContent = c4;
 
     document.body.style.background = 'linear-gradient' + '(' + '20deg' + ',' + c1 + ',' + c2 + ',' + c3 + ',' + c4 + ')';
+
+    console.log('changeBG');
 }
 
 document.getElementById('r1').addEventListener('input', changeBG);
@@ -195,7 +199,10 @@ function randomBG() {
     document.getElementById('b4').value = b4;
 
     document.body.style.background = 'linear-gradient' + '(' + '20deg' + ',' + c1 + ',' + c2 + ',' + c3 + ',' + c4 + ')';  
-}
+
+
+    console.log('random')
+;}
 
 var globalNames = ['Mariana Mattos', 'Adicione com a tecla enter', 'Exclua apertando o botão', 'Edite ao clicar no texto'];
 var inputName = document.getElementById('inputName');
@@ -209,6 +216,7 @@ function preventFormSubmit() {
         event.preventDefault();
     }
     form.addEventListener('submit', handleFormSubmit);
+    console.log('prevent submit');
 }
 
 function activateInput() {
@@ -283,8 +291,10 @@ function render() {
     }
     divNames.appendChild(ul);
     clearInput();
+    console.log('render');
 }
 
 function clearInput() {
     inputName.value = '';
+    console.log('limpo');
 }
