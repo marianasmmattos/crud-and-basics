@@ -10,7 +10,6 @@ function start() {
 
 function menu() {
     const buttons = [...document.querySelectorAll('button')];
-    console.log('clicou no menu')
 
     buttons.forEach(button => {
         const btnRGB = document.querySelector('button.coresrgb')
@@ -26,7 +25,7 @@ function menu() {
             igti.style.transform = 'translateY(20%)';
 
             if (button == btnRGB) {
-                document.querySelector('div#wichrgb').style.transform = 'translateY(-40vh)';
+                document.querySelector('div#wichrgb').style.transform = 'translateY(-70vh)';
                 document.querySelector('div#regradetres').style.transform = 'translateY(100vh)';
                 document.querySelector('div#cadastro').style.transform = 'translateY(100vh)';
             }
@@ -36,18 +35,18 @@ function menu() {
                 document.querySelector('div#wichrgb').style.transform = 'translateY(100vh)';
             }
             if (button == btnCRUD) {
-                document.querySelector('div#cadastro').style.transform = 'translateY(-40vh)';
+                document.querySelector('div#cadastro').style.transform = 'translateY(-50vh)';
                 document.querySelector('div#wichrgb').style.transform = 'translateY(100vh)';
                 document.querySelector('div#regradetres').style.transform = 'translateY(100vh)';
             }
             if (button == rgbEX){
-                document.querySelector('div#rgb').style.transform ='translateY(-170vh)';
+                document.querySelector('div#rgb').style.transform ='translateY(-210vh)';
                 document.querySelector('div#wichrgb').style.transform = 'translateY(100vh)';
             } else {
                 document.querySelector('div#rgb').style.transform = 'translateY(100vh)';
             }
             if (button == rgbBGN){
-                document.querySelector('div#rgbBG').style.transform = 'translateY(-50vh)';
+                document.querySelector('div#rgbBG').style.transform = 'translateY(-90vh)';
                 document.querySelector('div#wichrgb').style.transform = 'translateY(100vh)';
             } else {
                 document.querySelector('div#rgbBG').style.transform = 'translateY(100vh)';
@@ -57,7 +56,7 @@ function menu() {
             }
             if (button == random) {
                 randomBG();
-                document.querySelector('div#rgbBG').style.transform = 'translateY(-40vh)';
+                document.querySelector('div#rgbBG').style.transform = 'translateY(-70vh)';
                 document.querySelector('div#cadastro').style.transform = 'translateY(100vh)';
                 document.querySelector('div#wichrgb').style.transform = 'translateY(100vh)';
                 document.querySelector('div#regradetres').style.transform = 'translateY(100vh)';
@@ -75,14 +74,14 @@ function regrade3() {
     const valor3 = document.getElementById('valuethree').value;
 
     if (inverso.checked) {
-        const multiplica = valor1 * valor2;
-        const divide = multiplica / valor3;
+        let multiplica = valor1 * valor2;
+        let divide = multiplica / valor3;
     
         document.getElementById('valuefour').value = divide;
 
     } else {
-    const multiplica = valor1 * valor3;
-    const divide = multiplica / valor2;
+    let multiplica = valor1 * valor3;
+    let divide = multiplica / valor2;
 
     document.getElementById('valuefour').value = divide;
     }
@@ -93,7 +92,7 @@ function changeColor() {
     const red = document.getElementById('rangeRed').value;
     const green = document.getElementById('rangeGreen').value;
     const blue = document.getElementById('rangeBlue').value;
-    var color = 'rgb(' + red + ',' + green + ',' + blue + ')';
+    let color = 'rgb(' + red + ',' + green + ',' + blue + ')';
 
     document.getElementById('rgbinput').style.backgroundColor = color;
     document.getElementById('rgbinputlabel').value = color;
@@ -109,28 +108,28 @@ function changeBG() {
     const r1 = document.getElementById('r1').value;
     const g1 = document.getElementById('g1').value;
     const b1 = document.getElementById('b1').value;
-    const c1 = 'rgb(' + r1 + ',' + g1 + ',' + b1 + ')';
+    let c1 = 'rgb(' + r1 + ',' + g1 + ',' + b1 + ')';
     document.getElementById('rgbin1').style.backgroundColor = c1;
     document.getElementById('rgblab1').textContent = c1;
 
     const r2 = document.getElementById('r2').value;
     const g2 = document.getElementById('g2').value;
     const b2 = document.getElementById('b2').value;
-    const c2 = 'rgb(' + r2 + ',' + g2 + ',' + b2 + ')';
+    let c2 = 'rgb(' + r2 + ',' + g2 + ',' + b2 + ')';
     document.getElementById('rgbin2').style.backgroundColor = c2;
     document.getElementById('rgblab2').textContent = c2;
 
     const r3 = document.getElementById('r3').value;
     const g3 = document.getElementById('g3').value;
     const b3 = document.getElementById('b3').value;
-    const c3 = 'rgb(' + r3 + ',' + g3 + ',' + b3 + ')';
+    let c3 = 'rgb(' + r3 + ',' + g3 + ',' + b3 + ')';
     document.getElementById('rgbin3').style.backgroundColor = c3;
     document.getElementById('rgblab3').textContent = c3;
 
     const r4 = document.getElementById('r4').value;
     const g4 = document.getElementById('g4').value;
     const b4 = document.getElementById('b4').value;
-    const c4 = 'rgb(' + r4 + ',' + g4 + ',' + b4 + ')';
+    let c4 = 'rgb(' + r4 + ',' + g4 + ',' + b4 + ')';
     document.getElementById('rgbin4').style.backgroundColor = c4;
     document.getElementById('rgblab4').textContent = c4;
 
@@ -154,45 +153,45 @@ document.getElementById('b4').addEventListener('input', changeBG);
 function randomBG() {
     const random = (min, max) => Math.random() * (max - min) + min;
     
-    var r1 = random(0,255);
-    var r2 = random(0,255);
-    var r3 = random(0,255);
-    var r4 = random(0,255);
-    var g1 = random(0,255);
-    var g2 = random(0,255);
-    var g3 = random(0,255);
-    var g4 = random(0,255);
-    var b1 = random(0,255);
-    var b2 = random(0,255);
-    var b3 = random(0,255);
-    var b4 = random(0,255);
+    let r1 = random(0,255);
+    let r2 = random(0,255);
+    let r3 = random(0,255);
+    let r4 = random(0,255);
+    let g1 = random(0,255);
+    let g2 = random(0,255);
+    let g3 = random(0,255);
+    let g4 = random(0,255);
+    let b1 = random(0,255);
+    let b2 = random(0,255);
+    let b3 = random(0,255);
+    let b4 = random(0,255);
 
-    const c1 = 'rgb(' + r1 + ',' + g1 + ',' + b1 + ')';
-    const sc1 = 'rgb(' + parseInt(r1) + ',' + parseInt(g1) + ',' + parseInt(b1) + ')';
+    let c1 = 'rgb(' + r1 + ',' + g1 + ',' + b1 + ')';
+    let sc1 = 'rgb(' + parseInt(r1) + ',' + parseInt(g1) + ',' + parseInt(b1) + ')';
     document.getElementById('rgbin1').style.backgroundColor = c1;
     document.getElementById('rgblab1').textContent = sc1;
     document.getElementById('r1').value = r1;
     document.getElementById('g1').value = g1;
     document.getElementById('b1').value = b1;
 
-    const c2 = 'rgb(' + r2 + ',' + g2 + ',' + b2 + ')';
-    const sc2 = 'rgb(' + parseInt(r2) + ',' + parseInt(g2) + ',' + parseInt(b2) + ')';
+    let c2 = 'rgb(' + r2 + ',' + g2 + ',' + b2 + ')';
+    let sc2 = 'rgb(' + parseInt(r2) + ',' + parseInt(g2) + ',' + parseInt(b2) + ')';
     document.getElementById('rgbin2').style.backgroundColor = c2;
     document.getElementById('rgblab2').textContent = sc2;
     document.getElementById('r2').value = r2;
     document.getElementById('g2').value = g2;
     document.getElementById('b2').value = b2;
     
-    const c3 = 'rgb(' + r3 + ',' + g3 + ',' + b3 + ')';
-    const sc3 = 'rgb(' + parseInt(r3) + ',' + parseInt(g3) + ',' + parseInt(b3) + ')';
+    let c3 = 'rgb(' + r3 + ',' + g3 + ',' + b3 + ')';
+    let sc3 = 'rgb(' + parseInt(r3) + ',' + parseInt(g3) + ',' + parseInt(b3) + ')';
     document.getElementById('rgbin3').style.backgroundColor = c3;
     document.getElementById('rgblab3').textContent = sc3;
     document.getElementById('r3').value = r3;
     document.getElementById('g3').value = g3;
     document.getElementById('b3').value = b3;
 
-    const c4 = 'rgb(' + r4 + ',' + g4 + ',' + b4 + ')';
-    const sc4 = 'rgb(' + parseInt(r4) + ',' + parseInt(g4) + ',' + parseInt(b4) + ')';
+    let c4 = 'rgb(' + r4 + ',' + g4 + ',' + b4 + ')';
+    let sc4 = 'rgb(' + parseInt(r4) + ',' + parseInt(g4) + ',' + parseInt(b4) + ')';
     document.getElementById('rgbin4').style.backgroundColor = c4;
     document.getElementById('rgblab4').textContent = sc4;
     document.getElementById('r4').value = r4;
