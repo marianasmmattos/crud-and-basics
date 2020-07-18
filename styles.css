@@ -3,6 +3,14 @@
     padding: 0;
 }
 
+#rgbBG,
+#wichrgb,
+#regradetres,
+#rgb,
+#cadastro {
+    transform: translateY(150vh);
+}
+
 html {
     font-family: "Grenze Gotisch", sans-serif;
     height: 100%;
@@ -25,6 +33,7 @@ body {
 
     background: linear-gradient(20deg, #ffdecf, #ba7967, #5e6f64, #3f4441);
     background-size: 200% 200%;
+    background-attachment: fixed;
 }
 
 #content {
@@ -47,12 +56,12 @@ body {
 }
 
 #intro{
-    overflow: hidden;
+    background: transparent;
     position: relative;
+    overflow: hidden;
     display: flex;
     flex-direction: row;
     text-align: center;
-    background: transparent;
 }
 
 #intro:after {
@@ -159,8 +168,6 @@ body {
     align-items: center;
 
     text-align: center;
-
-    transform: translateY(150vh);
     transition: 3s;
 
     border-radius: 10px;
@@ -243,7 +250,6 @@ body {
     position: relative;
     flex-direction: row ;
     justify-content: space-between;
-    transform: translateY(250vh);
 
     transition: 3s;
 
