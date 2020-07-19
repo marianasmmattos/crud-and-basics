@@ -5,7 +5,7 @@ function start() {
     preventFormSubmit();
     activateInput();
     menu();
-    console.log('carregou o start');
+    fetchCountries();
 }
 
 function menu() {
@@ -17,6 +17,7 @@ function menu() {
         const btnCRUD = document.querySelector('button.crud')
         const rgbEX = document.querySelector('button.rgbGerator');
         const rgbBGN = document.querySelector('button.rgbBGchange');
+        const crudAPI = document.querySelector('button.crudAPI');
         const send = document.querySelector('button#send');
         
         button.addEventListener("click", event => {
@@ -57,6 +58,13 @@ function menu() {
             if (button == random) {
                 randomBG();
                 document.querySelector('div#rgbBG').style.transform = 'translateY(-70vh)';
+                document.querySelector('div#cadastro').style.transform = 'translateY(100vh)';
+                document.querySelector('div#wichrgb').style.transform = 'translateY(100vh)';
+                document.querySelector('div#regradetres').style.transform = 'translateY(100vh)';
+            }
+            if (button == crudAPI) {
+                document.querySelector('div#crudAPI1').style.transform = 'translateY(-250vh)';
+                document.querySelector('div#rgbBG').style.transform = 'translateY(100vh)';
                 document.querySelector('div#cadastro').style.transform = 'translateY(100vh)';
                 document.querySelector('div#wichrgb').style.transform = 'translateY(100vh)';
                 document.querySelector('div#regradetres').style.transform = 'translateY(100vh)';
@@ -216,7 +224,7 @@ function preventFormSubmit() {
         event.preventDefault();
     }
     form.addEventListener('submit', handleFormSubmit);
-    console.log('prevent submit');
+
 }
 
 function activateInput() {
@@ -291,10 +299,91 @@ function render() {
     }
     divNames.appendChild(ul);
     clearInput();
-    console.log('render');
 }
 
 function clearInput() {
     inputName.value = '';
     console.log('limpo');
 }
+
+tabCountries = document.getElementById(tabcountries);
+tabFavs = document.getElementById(tabFavs);
+
+countCountries = document.getElementById(countCountries);
+countFavs = document.getElementById(countFavs);
+
+totalPopList = document.getElementById(totalPopulationList);
+totalPopFavs = document.getElementById(totalFavs);
+
+numberFormat = Intl.NumberFormat('pt-BR')
+
+async function fetchCountries() {
+    let tabCountries = document.getElementById('tabcountries');
+    let tabFavs = null;
+
+    let allCountries = [];
+    let favCountries = [];
+
+    let countCountries = 0;
+    let countFavs = 0;
+
+    let totalPopList = 0;
+    let totalPopFavs = 0;
+
+    let numberFormat = null;
+
+    const res = await fetch('https://restcountries.eu/rest/v2/all')
+    const json = await res.json()
+
+    allCountries = json.map(country => {
+
+        const { numericCode, population, flag } = country;
+
+        return {
+            id: numericCode,
+            name : country.translations.pt,
+            population,
+            flag
+        };
+    })
+
+    render2();
+
+    function render2(){
+        renderCountryList();
+        renderFavs()
+        renderSummary()
+        renderHandleCountryButtons()    
+    }
+
+    function renderCountryList(){
+        let countriesHTML = '<div>';
+
+        allCountries.forEach(country => {
+            const { name, flag, id, population } = country;
+            let countryHTML = `
+            <div class="country">
+            <div>
+                <span class="btnADD"><a id="${id}">+</a></span>
+            </div>
+            <div class="imgc">
+                <img src="${flag}" alt="${name}">
+            </div>
+            <div>
+            <ul>
+            <li>${name}</li>
+            <li>${population}</li>
+            </ul>
+            </div>
+            </div>
+            `;
+            countriesHTML += countryHTML;
+        });
+
+        tabCountries.innerHTML = countriesHTML
+    }
+
+    function renderFavs(){}
+    function renderSummary(){}
+    function renderHandleCountryButtons(){}
+};

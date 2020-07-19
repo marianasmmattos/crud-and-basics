@@ -7,6 +7,7 @@
     <title>Módulo 1</title>
     <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Fondamento&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
 </head>
 <body>
 <div id="content">
@@ -21,6 +22,7 @@
                         <li><button class="rt">Regra de três</button></li>
                         <li><button class="coresrgb">Cores RGB</button></li>
                         <li><button class="crud">Lista CRUD</button></li>
+                        <li><button class="crudAPI">CRUD com API (1)</button></li>
                     </ul>
                  </li>
             </ul>
@@ -124,9 +126,8 @@
             <label id="rgblab4"></label>
             </div>
             <button id="random">Random</button>
-        </div>     
-
-        <div id="rgb" style="transform:translateY(100vh);">>
+    </div>     
+    <div id="rgb" style="transform:translateY(100vh);">
         <h1>Gerador de RGB<span></span></h1>
         <label>red:</label>
         <input type="range" id="rangeRed" value="0" min="0" max="255">
@@ -136,10 +137,23 @@
         <input type="range" id="rangeBlue" value="0" min="0" max="255">
         <div id="rgbinput">
         <label id="rgbinputlabel"></label>
-        <div>
+        </div>
     </div>
+    <div id="crudAPI1" style="transform:translateY(100vh);">
+        <h2>Seus países favoritos<h2>
+        <div class="countrycontainer">
+            <div class="countryList">
+                <h5>Países(<span id="countCountries"></span>)</h5>
+                <h6>População total: <span id="totalPopulationList"></span></h6>
+                <div id="scroll"><div id="tabcountries"></div></div>
+            </div>
+            <div class="countryFavs">
+                <h5>Países(<span id="countFavs"></span>)</h5>
+                <h6>População total: <span id="totalFavs"></span></h6>
+                <div id="tabFavs"></div>
+            </div>
+        </div>
     </div>
-
 </div>
     <script src="scripts.js"></script>   
 </body>

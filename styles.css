@@ -27,7 +27,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 80%;
+    height: 100%;
     width: 100vw;  
 
     background: linear-gradient(20deg, #ffdecf, #ba7967, #5e6f64, #3f4441);
@@ -378,7 +378,6 @@ body {
     list-style: none;
 }
 
-
 #rgbinput{
     width: 70px;
     height: 70px;
@@ -386,4 +385,74 @@ body {
     margin-top: 10px;
     align-self: center;
     background-color: rgba(255, 255, 255, 0.705);
+}
+
+.countrycontainer {
+    display: flex;
+}
+
+#crudAPI1 {
+    width: 600px;
+}
+
+#crudAPI1 h5 {
+    font-size: 18px;
+}
+#crudAPI1 h6 {
+    font-size: 16px;
+}
+
+.add {
+    border-radius: 50%;
+    background-color: green;
+    color: white;
+    font-weight: bold;
+}
+
+.countryList,
+.countryFavs {
+    margin-top: 10px;
+    padding: 5px;
+    border: 1px solid gray;
+    border-radius: 10px;
+    margin-right: 10px;
+    width: 300px;
+    max-height: 400px;
+}
+
+#scroll {
+    overflow: auto;
+    height: 300px;
+    margin: 10px;
+}
+
+.country {
+    height: 80px;
+    width: 180px;
+    display: flex;
+    flex-direction: row;
+    align-items:right;
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;;
+}
+
+.country ul{
+    margin: 10px;
+    width: 150px;
+    list-style-type: none;    
+}
+.btnADD {
+    height: 15px;
+    width: 20px;
+    font-weight: 300;
+    border-radius: 150%; 
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.705);
+    background-color: green;
+}
+
+.country img {
+    height: 60px;
+    width: 60px;
+    border-radius: 80%; 
 }
