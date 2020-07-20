@@ -130,13 +130,12 @@ body {
     text-align: center; 
 }
 .menu ul ul {
-    transform: translateX(15%);
-    position: absolute;
+    position: relative;
+    z-index: 2;
     visibility: hidden;
     display: flex;
     flex-direction: column;
     justify-items: center;
-    z-index: 4;
 }
 .menu ul ul li {
     border-bottom: 1px solid rgba(255, 255, 255, 0.178);
@@ -358,11 +357,11 @@ input[type=range]::-webkit-slider-runnable-track {
 
 
 #cadastro {
-    z-index: -1;
+    position: relative;
+    z-index: 1;
     min-width: 500px;
     padding: 30px;
     display: flex;
-    position: relative;
     flex-direction: column;
 
     transition: 3s;
@@ -408,7 +407,11 @@ input[type=range]::-webkit-slider-runnable-track {
 }
 
 #crudAPI1 {
-    z-index: -1;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1;
     width: 600px;
     border-radius: 10px;
     padding: 30px;
@@ -418,19 +421,23 @@ input[type=range]::-webkit-slider-runnable-track {
 
 #crudAPI1 h5 {
     font-size: 18px;
+    align-self: center;
 }
 #crudAPI1 h6 {
     font-size: 16px;
-    font-family: 'Montserrat', sans-serif;;
+    align-self: center;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .countryList,
 .countryFavs {
+    display: flex;
     margin-top: 30px;
+    flex-direction: column;
     padding: 5px;
     box-shadow: inset 0 0 1em rgba(73, 73, 71, 0.335), 0 0 1em rgba(149, 143, 143, 0.274);
     border-radius: 10px;
-    width: 300px;
+    width: 280px;
     max-height: 400px;
 }
 
