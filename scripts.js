@@ -1,10 +1,10 @@
 document.addEventListener('DOMContentLoaded', start);
 
 function start() {
+    menu();
     render();
     preventFormSubmit();
     activateInput();
-    menu();
     fetchCountries();
 }
 
@@ -105,7 +105,6 @@ function changeColor() {
     document.getElementById('rgbinput').style.backgroundColor = color;
     document.getElementById('rgbinputlabel').value = color;
     //    document.getElementById('colorOutput').innerHTML = ':' + color;
-    console.log('changeColo');
 }
 
 document.getElementById('rangeRed').addEventListener('input', changeColor);
@@ -142,8 +141,6 @@ function changeBG() {
     document.getElementById('rgblab4').textContent = c4;
 
     document.body.style.background = 'linear-gradient' + '(' + '20deg' + ',' + c1 + ',' + c2 + ',' + c3 + ',' + c4 + ')';
-
-    console.log('changeBG');
 }
 
 document.getElementById('r1').addEventListener('input', changeBG);
@@ -343,6 +340,7 @@ async function fetchCountries() {
             id: numericCode,
             name : country.translations.pt,
             population,
+            formattedPopulation: formatNumber(population),
             flag
         };
     });
@@ -360,7 +358,7 @@ async function fetchCountries() {
         let countriesHTML = '<div>';
 
         allCountries.forEach(country => {
-            const { name, flag, id, population } = country;
+            const { name, flag, id, population, formattedPopulation } = country;
             let countryHTML = `
             <div class="country">
             <div>
@@ -372,7 +370,7 @@ async function fetchCountries() {
             <div>
             <ul>
             <li>${name}</li>
-            <li>${population}</li>
+            <li>${formattedPopulation}</li>
             </ul>
             </div>
             </div>
@@ -389,7 +387,7 @@ async function fetchCountries() {
         let favsHTML = '<div>'
 
         favCountries.forEach(country => {
-            const { name, flag, id, population } = country;
+            const { name, flag, id, population, formattedPopulation } = country;
             let favHTML = `
             <div class="country">
             <div>
@@ -401,7 +399,7 @@ async function fetchCountries() {
             <div>
             <ul>
             <li>${name}</li>
-            <li>${population}</li>
+            <li>${formattedPopulation}</li>
             </ul>
             </div>
             </div>
@@ -425,8 +423,8 @@ async function fetchCountries() {
             return accumulator + current.population;
         }, 0)
 
-        totalPopList.textContent = totalPopulation;
-        totalPopFavs.textContent = totalFavorites;
+        totalPopList.textContent = formatNumber(totalPopulation);
+        totalPopFavs.textContent = formatNumber(totalFavorites);
     }
 
     function renderHandleCountryButtons(){
@@ -443,11 +441,36 @@ async function fetchCountries() {
     }
 
     function addToFavorites (id){
-        const countryToAdd = allCountries.find(button => button.id === id);
-        console.log(countryToAdd)
+        const countryToAdd = allCountries.find(country => country.id === id);
+        
+        favCountries = [...favCountries, countryToAdd];
+
+        favCountries.sort((a, b) => {
+            return a.name.localeCompare(b.name)
+        });
+        console.log(favCountries);
+    
+        allCountries = allCountries.filter(country => country.id !== id);
+    
+        render2();
     } 
 
-    function removeeFromFavorites(id){
+    function removeFromFavorites(id){
+        const countryToRemove = favCountries.find(country => country.id === id);
+        
+        allCountries = [...allCountries, countryToRemove];
 
+        allCountries.sort((a, b) => {
+            return a.name.localeCompare(b.name)
+        });
+        console.log(favCountries);
+    
+        favCountries = favCountries.filter(country => country.id !== id);
+    
+        render2();
+    }
+
+    function formatNumber(number){
+        return numberFormat.format(number);
     }
 };
