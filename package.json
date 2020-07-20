@@ -1,0 +1,22 @@
+{
+  "name": "bootcamp-fullstack",
+  "version": "1.0.0",
+  "description": "Projetos do modulo 1 do bootcamp fullstack fornecido pelo igti",
+  "main": "podcasts.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marianasmmattos/crud-and-basics.git"
+  },
+  "author": "Mariana Mattos",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/marianasmmattos/crud-and-basics/issues"
+  },
+  "homepage": "https://github.com/marianasmmattos/crud-and-basics#readme",
+  "devDependencies": {
+    "live-server": "^1.2.1"
+  }
+}

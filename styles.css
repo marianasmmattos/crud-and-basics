@@ -10,6 +10,7 @@ html {
     overflow: hidden; 
     box-sizing: border-box;
 }
+
 html::-webkit-scrollbar { 
     display: none;
 }
@@ -17,6 +18,7 @@ html::-webkit-scrollbar {
 h1,h2 {
     font-family: "Fondamento", sans-serif;
 }
+
 body {
     position: relative; 
     top: 0;
@@ -129,6 +131,7 @@ body {
     position: relative;  
     text-align: center; 
 }
+
 .menu ul ul {
     position: relative;
     z-index: 2;
@@ -137,17 +140,24 @@ body {
     display: flex;
     flex-direction: column;
     justify-items: center;
+    transition: 3s;
 }
-.menu ul ul li {
+
+.li {
     border-bottom: 1px solid rgba(255, 255, 255, 0.178);
     position: relative;
     z-index: 2;
     opacity: 0.99;
+    margin-right: 5px;  
+    margin-left: 5px;
+    transition: 3s;
 }
+
 .menu ul li:hover ul,
 .menu ul li ul:hover {
     visibility: visible;
 }
+
 .menu ul ul button {
     font-family: "Grenze Gotisch", sans-serif;
     background-color: transparent;
@@ -155,6 +165,7 @@ body {
     cursor: pointer;
     transition: 100ms;
 }
+
 .menu ul ul button:hover,
 .menu ul ul button:focus {
     outline-style: none;
@@ -303,6 +314,7 @@ input[type=range]::-webkit-slider-thumb {
     color: rgba(255, 255, 255, 0.527);
     cursor: pointer;
 }
+
 #wichrgb h2:focus {
     color: rgba(255, 255, 255, 0.527);
     cursor: pointer;
@@ -356,6 +368,7 @@ input[type=range]::-webkit-slider-thumb {
 
 #inverso {
     margin-right: 5px;
+    cursor: pointer;
 }
 
 #send,
@@ -379,8 +392,8 @@ input[type=range]::-webkit-slider-thumb {
     align-self: center;
 }
 
-
-#cadastro {
+#cadastro,
+#radiopodcast {
     position: relative;
     z-index: -1;
     min-width: 500px;
@@ -430,6 +443,10 @@ input[type=range]::-webkit-slider-thumb {
     display: flex;
 }
 
+a {
+cursor: pointer;
+}
+
 #crudAPI1 {
     position: relative;
     display: flex;
@@ -444,11 +461,11 @@ input[type=range]::-webkit-slider-thumb {
     background-color: rgba(255, 255, 255, 0.171);
 }
 
-
 #crudAPI1 h5 {
     font-size: 18px;
     align-self: center;
 }
+
 #crudAPI1 h6 {
     font-size: 16px;
     align-self: center;
@@ -502,7 +519,7 @@ input[type=range]::-webkit-slider-thumb {
     flex-direction: row;
     align-items:right;
     font-size: 14px;
-    font-family: 'Montserrat', sans-serif;;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .country ul{
@@ -536,4 +553,42 @@ input[type=range]::-webkit-slider-thumb {
 
 input[type=text]:focus{
     box-shadow: 0 0 20px rgba(67, 133, 56, 0.835)
+}
+
+#radiopodcast {
+    display: flex;
+    align-items: center;
+    max-height: 400px;
+    width: 300px;
+    font-size: 14px;
+}
+
+#radiopodcast img {
+    border-radius: 50%;
+    margin: 15px;
+    width: 100px;
+    height: 100px;
+}
+
+#rangeFreq {
+    width: 300px;
+    margin: 10px;
+    box-shadow: 0 0 20px rgba(68, 133, 56, 0.52)
+}
+
+#freq {
+    color: rgba(0, 0, 0, 0.678);
+    outline: none;
+    text-align: center;
+    margin: 10px;
+    width: 50px;
+    border-radius: 10px;
+    font-family: 'Montserrat', sans-serif;
+    background: rgba(56, 56, 53, 0.267);
+}
+
+#radiopodcast p{
+    color: rgba(0, 0, 0, 0.616);
+    margin-top: 5px;
+    width: 200px;
 }

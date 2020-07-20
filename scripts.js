@@ -1,7 +1,6 @@
-document.addEventListener('DOMContentLoaded', start);
-
 function start() {
     menu();
+    APIpodcast();
     render();
     preventFormSubmit();
     activateInput();
@@ -18,12 +17,14 @@ function menu() {
         const rgbEX = document.querySelector('button.rgbGerator');
         const rgbBGN = document.querySelector('button.rgbBGchange');
         const crudAPI = document.querySelector('button.crudAPI');
+        const APIpodcast = document.querySelector('button.APIpodcast');
         const send = document.querySelector('button#send');
         
         button.addEventListener("click", event => {
-
+            const menu = document.getElementById('op');
             const igti = document.getElementById('igti');
             igti.style.transform = 'translateY(20%)';
+            menu.style.flexDirection= 'row';
 
             if (button == btnRGB) {
                 document.querySelector('div#wichrgb').style.transform = 'translateY(-70vh)';
@@ -73,7 +74,13 @@ function menu() {
                 document.querySelector('div#wichrgb').style.transform = 'translateY(100vh)';
                 document.querySelector('div#regradetres').style.transform = 'translateY(100vh)';
             }
-            console.log('clicou no botao-menu')
+            if (button == APIpodcast) {
+                document.querySelector('div#radiopodcast').style.transform = 'translateY(-400vh)';
+                document.querySelector('div#wichrgb').style.transform = 'translateY(100vh)';
+                document.querySelector('div#regradetres').style.transform = 'translateY(100vh)';
+                document.querySelector('div#cadastro').style.transform = 'translateY(100vh)';
+                document.querySelector('div#crudAPI1').style.transform = 'translateY(100vh)';
+            }
         });
     });
 }
@@ -463,3 +470,57 @@ async function fetchCountries() {
         return numberFormat.format(number);
     }
 };
+
+function APIpodcast () {
+    var rangeFreq = document.querySelector('#rangeFreq');
+    var divPodcast = document.querySelector('#podcast');
+
+    rangeFreq.addEventListener('input', handleRangeValue);
+
+    function handleRangeValue(event){
+       var currentFreq = document.querySelector('#freq');
+       var newFreq = event.target.value;
+       currentFreq.value = newFreq;
+
+       findPodcastFrom(newFreq);
+    }
+
+    function findPodcastFrom(frequency) {
+        var foundPodcast = '';
+
+        for(var i = 0; i < realPodcasts.length; i++){
+            var currentPodcast = realPodcasts[i];
+
+            if (currentPodcast.id === frequency) {
+                foundPodcast = currentPodcast;
+                break;
+            }
+        }
+
+        if (foundPodcast) {
+            divPodcast.innerHTML = '<p>Podcast encontrado!</p>'
+            renderPodcast(foundPodcast);
+        } else {
+            divPodcast.innerHTML = '<p>Nenhum podcast encontrado!</p>'
+        }
+
+        function renderPodcast(podcast){
+            divPodcast.innerHTML = ``;
+            
+            var img = document.createElement('img');
+            img.src = './img/' + podcast.img;
+
+            var title = document.createElement('h2');
+            title.textContent = podcast.title;
+
+            var description = document.createElement('p');
+            description.textContent = podcast.description
+
+            divPodcast.appendChild(img);
+            divPodcast.appendChild(title);
+            divPodcast.appendChild(description);
+        }
+    }
+}
+
+start();
