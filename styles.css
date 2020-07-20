@@ -132,6 +132,7 @@ body {
 .menu ul ul {
     position: relative;
     z-index: 2;
+    opacity: 0.99;
     visibility: hidden;
     display: flex;
     flex-direction: column;
@@ -139,6 +140,9 @@ body {
 }
 .menu ul ul li {
     border-bottom: 1px solid rgba(255, 255, 255, 0.178);
+    position: relative;
+    z-index: 2;
+    opacity: 0.99;
 }
 .menu ul li:hover ul,
 .menu ul li ul:hover {
@@ -161,11 +165,20 @@ body {
     max-width: 500px;
     max-height: 270px;
 
+    z-index: -1;
+    opacity: 0.99;
+
     padding: 30px;
     display: flex;
     position: relative;
     flex-direction: column;
     align-items: center;
+
+    box-shadow:
+    inset 0px 0px 9px #3f4441,
+    inset 0px 0px 13px #5e6f64,
+    inset 0px 0px 15px #ba7967,
+    inset 0px 0px 17px #ffdecf;
 
     text-align: center;
     transition: 3s;
@@ -212,14 +225,25 @@ body {
     justify-content: center;
 }
 
-/*input[type=range] {
+input[type=range] {
     -webkit-appearance: none; 
-}
-
-input[type=range]::-webkit-slider-runnable-track {
+    outline: none;
+    height: 0.5em;
     background:rgba(51, 51, 51, 0.274);
     border-radius: 5px;
-}*/
+    align-self: center;
+    margin: 6px;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    all: unset;
+    -webkit-appearance: none; 
+    align-self: center;
+    width: 10px;
+    height: 10px;
+    background: #172329de;
+    border-radius: 10px;
+}
 
 #rgbin1,
 #rgbin2,
@@ -259,6 +283,9 @@ input[type=range]::-webkit-slider-runnable-track {
     flex-direction: row ;
     justify-content: space-between;
 
+    z-index: -1;
+    opacity: 0.99;
+
     transition: 3s;
 
     border-radius: 10px;
@@ -295,6 +322,9 @@ input[type=range]::-webkit-slider-runnable-track {
     display: flex;
     position: relative;
     flex-direction: column;
+
+    z-index: -1;
+    opacity: 0.99;
 
     justify-content: center;
 
@@ -358,7 +388,7 @@ input[type=range]::-webkit-slider-runnable-track {
 
 #cadastro {
     position: relative;
-    z-index: 1;
+    z-index: -1;
     min-width: 500px;
     padding: 30px;
     display: flex;
@@ -411,7 +441,8 @@ input[type=range]::-webkit-slider-runnable-track {
     display: flex;
     flex-direction: column;
     align-items: center;
-    z-index: 1;
+    z-index: -1;
+    opacity: 0.99;
     width: 600px;
     border-radius: 10px;
     padding: 30px;

@@ -144,9 +144,15 @@ function changeBG() {
     document.getElementById('rgbin4').style.backgroundColor = c4;
     document.getElementById('rgblab4').textContent = c4;
 
+    document.getElementById('rgbBG').style = `
+    box-shadow:
+    inset 0px 0px 9px ${c1},
+    inset 0px 0px 13px ${c2},
+    inset 0px 0px 15px ${c3},
+    inset 0px 0px 17px ${c4};`
+
     document.body.style.background = 'linear-gradient' + '(' + '20deg' + ',' + c1 + ',' + c2 + ',' + c3 + ',' + c4 + ')';
 }
-
 document.getElementById('r1').addEventListener('input', changeBG);
 document.getElementById('g1').addEventListener('input', changeBG);
 document.getElementById('b1').addEventListener('input', changeBG);
@@ -209,8 +215,12 @@ function randomBG() {
 
     document.body.style.background = 'linear-gradient' + '(' + '20deg' + ',' + c1 + ',' + c2 + ',' + c3 + ',' + c4 + ')';  
 
-
-    console.log('random')
+    document.getElementById('rgbBG').style = `
+    box-shadow:
+    inset 0px 0px 9px ${c1},
+    inset 0px 0px 13px ${c2},
+    inset 0px 0px 15px ${c3},
+    inset 0px 0px 17px ${c4};`
 ;}
 
 var globalNames = ['Mariana Mattos', 'Adicione com a tecla enter', 'Exclua apertando o botão', 'Edite ao clicar no texto'];
