@@ -362,7 +362,7 @@ async function fetchCountries() {
             let countryHTML = `
             <div class="country">
             <div>
-                <span class="btnADD"><a id="${id}">+</a></span>
+                <span class="btnADD"><a id="${id}"> + </a></span>
             </div>
             <div class="imgc">
                 <img src="${flag}" alt="${name}">
@@ -391,7 +391,7 @@ async function fetchCountries() {
             let favHTML = `
             <div class="country">
             <div>
-                <span class="btnREM"><a id="${id}">-</a></span>
+                <span class="btnREM"><a id="${id}"> x </a></span>
             </div>
             <div class="imgc">
                 <img src="${flag}" alt="${name}">
