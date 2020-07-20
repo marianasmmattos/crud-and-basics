@@ -144,13 +144,6 @@ function changeBG() {
     document.getElementById('rgbin4').style.backgroundColor = c4;
     document.getElementById('rgblab4').textContent = c4;
 
-    document.getElementById('rgbBG').style = `
-    box-shadow:
-    inset 0px 0px 9px ${c1},
-    inset 0px 0px 13px ${c2},
-    inset 0px 0px 15px ${c3},
-    inset 0px 0px 17px ${c4};`
-
     document.body.style.background = 'linear-gradient' + '(' + '20deg' + ',' + c1 + ',' + c2 + ',' + c3 + ',' + c4 + ')';
 }
 document.getElementById('r1').addEventListener('input', changeBG);
@@ -214,14 +207,7 @@ function randomBG() {
     document.getElementById('b4').value = b4;
 
     document.body.style.background = 'linear-gradient' + '(' + '20deg' + ',' + c1 + ',' + c2 + ',' + c3 + ',' + c4 + ')';  
-
-    document.getElementById('rgbBG').style = `
-    box-shadow:
-    inset 0px 0px 9px ${c1},
-    inset 0px 0px 13px ${c2},
-    inset 0px 0px 15px ${c3},
-    inset 0px 0px 17px ${c4};`
-;}
+}
 
 var globalNames = ['Mariana Mattos', 'Adicione com a tecla enter', 'Exclua apertando o botão', 'Edite ao clicar no texto'];
 var inputName = document.getElementById('inputName');
@@ -316,17 +302,6 @@ function clearInput() {
     inputName.value = '';
     console.log('limpo');
 }
-
-tabCountries = document.getElementById('tabcountries');
-tabFavs = document.getElementById('tabFavs');
-
-countCountries = document.getElementById('countCountries');
-countFavs = document.getElementById('countFavs');
-
-totalPopList = document.getElementById('totalPopulationList');
-totalPopFavs = document.getElementById('totalFavs');
-
-numberFormat = Intl.NumberFormat('pt-BR')
 
 async function fetchCountries() {
     let tabCountries = document.getElementById('tabcountries');
