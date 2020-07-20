@@ -136,6 +136,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-items: center;
+    z-index: 4;
 }
 .menu ul ul li {
     border-bottom: 1px solid rgba(255, 255, 255, 0.178);
@@ -212,6 +213,14 @@ body {
     justify-content: center;
 }
 
+/*input[type=range] {
+    -webkit-appearance: none; 
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+    background:rgba(51, 51, 51, 0.274);
+    border-radius: 5px;
+}*/
 
 #rgbin1,
 #rgbin2,
@@ -349,6 +358,7 @@ body {
 
 
 #cadastro {
+    z-index: -1;
     min-width: 500px;
     padding: 30px;
     display: flex;
@@ -398,6 +408,7 @@ body {
 }
 
 #crudAPI1 {
+    z-index: -1;
     width: 600px;
     border-radius: 10px;
     padding: 30px;

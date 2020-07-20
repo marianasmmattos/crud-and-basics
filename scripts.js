@@ -29,19 +29,22 @@ function menu() {
                 document.querySelector('div#wichrgb').style.transform = 'translateY(-70vh)';
                 document.querySelector('div#regradetres').style.transform = 'translateY(100vh)';
                 document.querySelector('div#cadastro').style.transform = 'translateY(100vh)';
+                document.querySelector('div#crudAPI1').style.transform = 'translateY(100vh)';
             }
             if (button == btnRT) {
                 document.querySelector('div#regradetres').style.transform = 'translateY(15vh)';
                 document.querySelector('div#cadastro').style.transform = 'translateY(100vh)';
                 document.querySelector('div#wichrgb').style.transform = 'translateY(100vh)';
+                document.querySelector('div#crudAPI1').style.transform = 'translateY(100vh)';
             }
             if (button == btnCRUD) {
-                document.querySelector('div#cadastro').style.transform = 'translateY(-50vh)';
+                document.querySelector('div#cadastro').style.transform = 'translateY(-30vh)';
                 document.querySelector('div#wichrgb').style.transform = 'translateY(100vh)';
                 document.querySelector('div#regradetres').style.transform = 'translateY(100vh)';
+                document.querySelector('div#crudAPI1').style.transform = 'translateY(100vh)';
             }
             if (button == rgbEX){
-                document.querySelector('div#rgb').style.transform ='translateY(-210vh)';
+                document.querySelector('div#rgb').style.transform ='translateY(-270vh)';
                 document.querySelector('div#wichrgb').style.transform = 'translateY(100vh)';
             } else {
                 document.querySelector('div#rgb').style.transform = 'translateY(100vh)';
@@ -61,9 +64,10 @@ function menu() {
                 document.querySelector('div#cadastro').style.transform = 'translateY(100vh)';
                 document.querySelector('div#wichrgb').style.transform = 'translateY(100vh)';
                 document.querySelector('div#regradetres').style.transform = 'translateY(100vh)';
+                document.querySelector('div#crudAPI1').style.transform = 'translateY(100vh)';
             }
             if (button == crudAPI) {
-                document.querySelector('div#crudAPI1').style.transform = 'translateY(-250vh)';
+                document.querySelector('div#crudAPI1').style.transform = 'translateY(-290vh)';
                 document.querySelector('div#rgbBG').style.transform = 'translateY(100vh)';
                 document.querySelector('div#cadastro').style.transform = 'translateY(100vh)';
                 document.querySelector('div#wichrgb').style.transform = 'translateY(100vh)';
