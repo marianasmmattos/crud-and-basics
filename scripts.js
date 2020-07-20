@@ -57,7 +57,7 @@ function menu() {
             }
             if (button == random) {
                 randomBG();
-                document.querySelector('div#rgbBG').style.transform = 'translateY(-70vh)';
+                document.querySelector('div#rgbBG').style.transform = 'translateY(-90vh)';
                 document.querySelector('div#cadastro').style.transform = 'translateY(100vh)';
                 document.querySelector('div#wichrgb').style.transform = 'translateY(100vh)';
                 document.querySelector('div#regradetres').style.transform = 'translateY(100vh)';
@@ -429,5 +429,25 @@ async function fetchCountries() {
         totalPopFavs.textContent = totalFavorites;
     }
 
-    function renderHandleCountryButtons(){}
-    };
+    function renderHandleCountryButtons(){
+    const countryButtons = Array.from(tabCountries.querySelectorAll('a'));
+    const favButtons = Array.from(tabFavs.querySelectorAll('a'));
+    
+        countryButtons.forEach(button => {
+            button.addEventListener('click', () => addToFavorites(button.id));
+        })
+
+        favButtons.forEach(button => {
+            button.addEventListener('click', () => removeFromFavorites(button.id));
+        })
+    }
+
+    function addToFavorites (id){
+        const countryToAdd = allCountries.find(button => button.id === id);
+        console.log(countryToAdd)
+    } 
+
+    function removeeFromFavorites(id){
+
+    }
+};
