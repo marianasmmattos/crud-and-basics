@@ -306,31 +306,31 @@ function clearInput() {
     console.log('limpo');
 }
 
-tabCountries = document.getElementById(tabcountries);
-tabFavs = document.getElementById(tabFavs);
+tabCountries = document.getElementById('tabcountries');
+tabFavs = document.getElementById('tabFavs');
 
-countCountries = document.getElementById(countCountries);
-countFavs = document.getElementById(countFavs);
+countCountries = document.getElementById('countCountries');
+countFavs = document.getElementById('countFavs');
 
-totalPopList = document.getElementById(totalPopulationList);
-totalPopFavs = document.getElementById(totalFavs);
+totalPopList = document.getElementById('totalPopulationList');
+totalPopFavs = document.getElementById('totalFavs');
 
 numberFormat = Intl.NumberFormat('pt-BR')
 
 async function fetchCountries() {
     let tabCountries = document.getElementById('tabcountries');
-    let tabFavs = null;
+    let tabFavs = document.getElementById('tabFavs');
 
     let allCountries = [];
     let favCountries = [];
 
-    let countCountries = 0;
-    let countFavs = 0;
+    let countCountries = document.getElementById('countCountries');
+    let countFavs = document.getElementById('countFavs');
 
-    let totalPopList = 0;
-    let totalPopFavs = 0;
+    let totalPopList = document.getElementById('totalPopulationList');
+    let totalPopFavs = document.getElementById('totalFavs');
 
-    let numberFormat = null;
+    numberFormat = Intl.NumberFormat('pt-BR')
 
     const res = await fetch('https://restcountries.eu/rest/v2/all')
     const json = await res.json()
@@ -345,7 +345,7 @@ async function fetchCountries() {
             population,
             flag
         };
-    })
+    });
 
     render2();
 
@@ -380,10 +380,54 @@ async function fetchCountries() {
             countriesHTML += countryHTML;
         });
 
-        tabCountries.innerHTML = countriesHTML
+        countriesHTML += '</div>';
+
+        tabCountries.innerHTML = countriesHTML;
     }
 
-    function renderFavs(){}
-    function renderSummary(){}
+    function renderFavs(){
+        let favsHTML = '<div>'
+
+        favCountries.forEach(country => {
+            const { name, flag, id, population } = country;
+            let favHTML = `
+            <div class="country">
+            <div>
+                <span class="btnREM"><a id="${id}">-</a></span>
+            </div>
+            <div class="imgc">
+                <img src="${flag}" alt="${name}">
+            </div>
+            <div>
+            <ul>
+            <li>${name}</li>
+            <li>${population}</li>
+            </ul>
+            </div>
+            </div>
+            `;
+            favsHTML += favHTML;
+        })
+
+        favsHTML += '</div>'
+        tabFavs.innerHTML = favsHTML
+    }
+    
+    function renderSummary(){
+        countCountries.textContent = allCountries.length;
+        countFavs.textContent = favCountries.length;
+    
+        const totalPopulation = allCountries.reduce((accumulator, current) => {
+            return accumulator + current.population;
+        }, 0)
+
+        const totalFavorites = favCountries.reduce((accumulator, current) => {
+            return accumulator + current.population;
+        }, 0)
+
+        totalPopList.textContent = totalPopulation;
+        totalPopFavs.textContent = totalFavorites;
+    }
+
     function renderHandleCountryButtons(){}
-};
+    };
