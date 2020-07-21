@@ -1,5 +1,6 @@
 function start() {
     menu();
+    megasena();
     APIpodcast();
     render();
     preventFormSubmit();
@@ -18,6 +19,7 @@ function menu() {
         const rgbBGN = document.querySelector('button.rgbBGchange');
         const crudAPI = document.querySelector('button.crudAPI');
         const APIpodcast = document.querySelector('button.APIpodcast');
+        const megasena = document.querySelector('button.megasena');
         const send = document.querySelector('button#send');
         
         button.addEventListener("click", event => {
@@ -81,6 +83,13 @@ function menu() {
                 document.querySelector('div#cadastro').style.transform = 'translateY(100vh)';
                 document.querySelector('div#crudAPI1').style.transform = 'translateY(100vh)';
             }
+            if (button == megasena) {
+                document.querySelector('div#megasena').style.transform = 'translateY(-400vh)';
+                document.querySelector('div#wichrgb').style.transform = 'translateY(100vh)';
+                document.querySelector('div#regradetres').style.transform = 'translateY(100vh)';
+                document.querySelector('div#cadastro').style.transform = 'translateY(100vh)';
+                document.querySelector('div#crudAPI1').style.transform = 'translateY(100vh)';
+            }
         });
     });
 }
@@ -122,6 +131,18 @@ document.getElementById('rangeRed').addEventListener('input', changeColor);
 document.getElementById('rangeGreen').addEventListener('input', changeColor);
 document.getElementById('rangeBlue').addEventListener('input', changeColor);
 
+document.getElementById('r1').addEventListener('input', changeBG);
+document.getElementById('g1').addEventListener('input', changeBG);
+document.getElementById('b1').addEventListener('input', changeBG);
+document.getElementById('r2').addEventListener('input', changeBG);
+document.getElementById('g2').addEventListener('input', changeBG);
+document.getElementById('b2').addEventListener('input', changeBG);
+document.getElementById('r3').addEventListener('input', changeBG);
+document.getElementById('g3').addEventListener('input', changeBG);
+document.getElementById('r4').addEventListener('input', changeBG);
+document.getElementById('g4').addEventListener('input', changeBG);
+document.getElementById('b4').addEventListener('input', changeBG);
+
 function changeBG() {
     const r1 = document.getElementById('r1').value;
     const g1 = document.getElementById('g1').value;
@@ -153,17 +174,6 @@ function changeBG() {
 
     document.body.style.background = 'linear-gradient' + '(' + '20deg' + ',' + c1 + ',' + c2 + ',' + c3 + ',' + c4 + ')';
 }
-document.getElementById('r1').addEventListener('input', changeBG);
-document.getElementById('g1').addEventListener('input', changeBG);
-document.getElementById('b1').addEventListener('input', changeBG);
-document.getElementById('r2').addEventListener('input', changeBG);
-document.getElementById('g2').addEventListener('input', changeBG);
-document.getElementById('b2').addEventListener('input', changeBG);
-document.getElementById('r3').addEventListener('input', changeBG);
-document.getElementById('g3').addEventListener('input', changeBG);
-document.getElementById('r4').addEventListener('input', changeBG);
-document.getElementById('g4').addEventListener('input', changeBG);
-document.getElementById('b4').addEventListener('input', changeBG);
 
 function randomBG() {
     const random = (min, max) => Math.random() * (max - min) + min;
@@ -521,6 +531,21 @@ function APIpodcast () {
             divPodcast.appendChild(description);
         }
     }
+}
+
+function megasena(){
+    var megas = document.querySelector('#numbers')
+
+    function start2() {
+        var numbers = '';
+        fetch('http://localhost:3000').then(function(resource){
+            resource.json().then(function(json){
+                megas.value = json.numbers;
+            })
+        });
+    }
+
+    start2();
 }
 
 start();
