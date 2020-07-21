@@ -1,4 +1,4 @@
-/* complementa a responsividade posta no scripts.js */
+/* responsividade posta no scripts.js 
 @media only-screen and (max-height: 650px) {
 /*  rgb btn1 = -90vh
     rgb btn2 = -160vh
@@ -6,18 +6,43 @@
 
     cadastro = -50vh
 
-    
-*/
-}
+    países = -215vh
+
+    radiopodcast = -290vh
+
+    mega-sena: -330vh
+
+
 
 @media only-screen and (max-height: 850px) {
+/*    rgb btn2 = -130vh
+      rgb btn33 = -90vh
     
-}
+      cadastro = -40vh
+
+    países = -165vh
+
+    radiopodcast = -220vh
+
+    mega-sena: -240vh
+
+
 
 @media only-screen and (max-height: 1000px) {
-    
-}
+/*  rgb btn1 = -60vh
+    rgb btn2 = -100vh
+    rgb btn33 = -70vh
+   
+    cadastro = -30vh
+
+    países = -135vh
+
+    radiopodcast = -170vh
+
+    mega-sena: -200vh
+
+
 
 @media only-screen and (max-height: 1900px) {
     
-}
+*/

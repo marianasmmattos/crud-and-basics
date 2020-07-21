@@ -601,6 +601,7 @@ input[type=text]:focus{
 #megasena {
     align-self: center;
     margin:0;
+    height: 500px;
     width: 500px;
     padding: 10px;
     border-radius: 10px;
@@ -610,7 +611,6 @@ input[type=text]:focus{
     justify-content: center;
     align-items: center;
     transition: 3s;
-    height: 500px;
     background-position: center;
     background-image: url('./img/megasena.jpg');
     opacity: 0.49;
