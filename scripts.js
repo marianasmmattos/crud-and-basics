@@ -534,13 +534,19 @@ function APIpodcast () {
 }
 
 function megasena(){
-    var megas = document.querySelector('#numbers')
+    var megas = document.querySelector('#megasena')
 
     function start2() {
-        var numbers = '';
         fetch('http://localhost:3000').then(function(resource){
             resource.json().then(function(json){
-                megas.value = json.numbers;
+               var numeros = [...json.numbers];
+               megas.innerHTML = ``;
+
+                for (i=0; i < numeros.length; i++ ){
+                    var recebe = document.createElement('input');
+                    recebe.value = numeros[i]
+                    megas.appendChild(recebe);
+                }
             })
         });
     }
