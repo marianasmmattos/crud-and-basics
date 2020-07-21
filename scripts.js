@@ -119,10 +119,10 @@ function menu() {
             }
             if (button == crudAPI) {
                 if (innerHeight > 650) {
-                    document.querySelector('div#crudAPI1').style.transform = 'translateY(-200vh)';
+                    document.querySelector('div#crudAPI1').style.transform = 'translateY(-190vh)';
                 } 
                 if (innerHeight > 850) {
-                    document.querySelector('div#crudAPI1').style.transform = 'translateY(-160vh)';
+                    document.querySelector('div#crudAPI1').style.transform = 'translateY(-150)';
                 }
                 if (innerHeight > 1000) {
                     document.querySelector('div#crudAPI1').style.transform = 'translateY(-135vh)';
@@ -136,10 +136,10 @@ function menu() {
             }
             if (button == APIpodcast) {
                 if (innerHeight > 650) {
-                    document.querySelector('div#radiopodcast').style.transform = 'translateY(-270vh)';
+                    document.querySelector('div#radiopodcast').style.transform = 'translateY(-250vh)';
                 } 
                 if (innerHeight > 850) {
-                    document.querySelector('div#radiopodcast').style.transform = 'translateY(-210vh)';
+                    document.querySelector('div#radiopodcast').style.transform = 'translateY(-200vh)';
                 }
                 if (innerHeight > 1000) {
                     document.querySelector('div#radiopodcast').style.transform = 'translateY(-170vh)';
@@ -152,10 +152,10 @@ function menu() {
             }
             if (button == megasena) {
                 if (innerHeight > 650) {
-                    document.querySelector('div#megasena').style.transform = 'translateY(-295vh)';
+                    document.querySelector('div#megasena').style.transform = 'translateY(-285vh)';
                 } 
                 if (innerHeight > 850) {
-                    document.querySelector('div#megasena').style.transform = 'translateY(-240vh)';
+                    document.querySelector('div#megasena').style.transform = 'translateY(-230vh)';
                 }
                 if (innerHeight > 1000) {
                     document.querySelector('div#megasena').style.transform = 'translateY(-200vh)';
