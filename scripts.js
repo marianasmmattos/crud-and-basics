@@ -28,22 +28,19 @@ function menu() {
             igti.style.transform = 'translateY(20%)';
             menu.style.flexDirection= 'row';
 
-            if (button == btnRGB) {
-                document.querySelector('div#wichrgb').style.transform = 'translateY(-70vh)';
-                document.querySelector('div#regradetres').style.transform = 'translateY(100vh)';
-                document.querySelector('div#cadastro').style.transform = 'translateY(100vh)';
-                document.querySelector('div#crudAPI1').style.transform = 'translateY(100vh)';
-            }
             if (button == btnRT) {
                 document.querySelector('div#regradetres').style.transform = 'translateY(15vh)';
                 document.querySelector('div#cadastro').style.transform = 'translateY(100vh)';
                 document.querySelector('div#wichrgb').style.transform = 'translateY(100vh)';
                 document.querySelector('div#crudAPI1').style.transform = 'translateY(100vh)';
             }
-            if (button == btnCRUD) {
-                document.querySelector('div#cadastro').style.transform = 'translateY(-30vh)';
-                document.querySelector('div#wichrgb').style.transform = 'translateY(100vh)';
+            if (button == send) {
+                regrade3();
+            }
+            if (button == btnRGB) {
+                document.querySelector('div#wichrgb').style.transform = 'translateY(-70vh)';
                 document.querySelector('div#regradetres').style.transform = 'translateY(100vh)';
+                document.querySelector('div#cadastro').style.transform = 'translateY(100vh)';
                 document.querySelector('div#crudAPI1').style.transform = 'translateY(100vh)';
             }
             if (button == rgbEX){
@@ -58,13 +55,16 @@ function menu() {
             } else {
                 document.querySelector('div#rgbBG').style.transform = 'translateY(100vh)';
             }
-            if (button == send) {
-                regrade3();
-            }
             if (button == random) {
                 randomBG();
                 document.querySelector('div#rgbBG').style.transform = 'translateY(-90vh)';
                 document.querySelector('div#cadastro').style.transform = 'translateY(100vh)';
+                document.querySelector('div#wichrgb').style.transform = 'translateY(100vh)';
+                document.querySelector('div#regradetres').style.transform = 'translateY(100vh)';
+                document.querySelector('div#crudAPI1').style.transform = 'translateY(100vh)';
+            }
+            if (button == btnCRUD) {
+                document.querySelector('div#cadastro').style.transform = 'translateY(-30vh)';
                 document.querySelector('div#wichrgb').style.transform = 'translateY(100vh)';
                 document.querySelector('div#regradetres').style.transform = 'translateY(100vh)';
                 document.querySelector('div#crudAPI1').style.transform = 'translateY(100vh)';
