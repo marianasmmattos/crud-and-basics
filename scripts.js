@@ -57,7 +57,7 @@ function menu() {
             }
             if (button == rgbEX){
                 if (innerHeight > 650) {
-                    document.querySelector('div#rgb').style.transform = 'translateY(-160vh)';
+                    document.querySelector('div#rgb').style.transform = 'translateY(-150vh)';
                 } 
                 if (innerHeight > 850) {
                     document.querySelector('div#rgb').style.transform = 'translateY(-130vh)';
@@ -71,7 +71,7 @@ function menu() {
             }
             if (button == rgbBGN){
                 if (innerHeight > 650) {
-                    document.querySelector('#rgbBG').style.transform = 'translateY(-110vh)';
+                    document.querySelector('#rgbBG').style.transform = 'translateY(-100vh)';
                 } 
                 if (innerHeight > 850) {
                     document.querySelector('#rgbBG').style.transform = 'translateY(-90vh)';
@@ -86,7 +86,7 @@ function menu() {
             if (button == random) {
                 randomBG();
                 if (innerHeight > 650) {
-                    document.querySelector('#rgbBG').style.transform = 'translateY(-110vh)';
+                    document.querySelector('#rgbBG').style.transform = 'translateY(-100vh)';
                 } 
                 if (innerHeight > 850) {
                     document.querySelector('#rgbBG').style.transform = 'translateY(-90vh)';
@@ -103,7 +103,7 @@ function menu() {
             }
             if (button == btnCRUD) {
                 if (innerHeight > 650) {
-                    document.querySelector('div#cadastro').style.transform = 'translateY(-50vh)';
+                    document.querySelector('div#cadastro').style.transform = 'translateY(-45vh)';
                 } 
                 if (innerHeight > 850) {
                     document.querySelector('div#cadastro').style.transform = 'translateY(-40vh)';
@@ -119,10 +119,10 @@ function menu() {
             }
             if (button == crudAPI) {
                 if (innerHeight > 650) {
-                    document.querySelector('div#crudAPI1').style.transform = 'translateY(-215vh)';
+                    document.querySelector('div#crudAPI1').style.transform = 'translateY(-205vh)';
                 } 
                 if (innerHeight > 850) {
-                    document.querySelector('div#crudAPI1').style.transform = 'translateY(-165vh)';
+                    document.querySelector('div#crudAPI1').style.transform = 'translateY(-160vh)';
                 }
                 if (innerHeight > 1000) {
                     document.querySelector('div#crudAPI1').style.transform = 'translateY(-135vh)';
@@ -136,10 +136,10 @@ function menu() {
             }
             if (button == APIpodcast) {
                 if (innerHeight > 650) {
-                    document.querySelector('div#radiopodcast').style.transform = 'translateY(-290vh)';
+                    document.querySelector('div#radiopodcast').style.transform = 'translateY(-280vh)';
                 } 
                 if (innerHeight > 850) {
-                    document.querySelector('div#radiopodcast').style.transform = 'translateY(-220vh)';
+                    document.querySelector('div#radiopodcast').style.transform = 'translateY(-210vh)';
                 }
                 if (innerHeight > 1000) {
                     document.querySelector('div#radiopodcast').style.transform = 'translateY(-170vh)';
@@ -152,7 +152,7 @@ function menu() {
             }
             if (button == megasena) {
                 if (innerHeight > 650) {
-                    document.querySelector('div#megasena').style.transform = 'translateY(-330vh)';
+                    document.querySelector('div#megasena').style.transform = 'translateY(-305vh)';
                 } 
                 if (innerHeight > 850) {
                     document.querySelector('div#megasena').style.transform = 'translateY(-240vh)';
