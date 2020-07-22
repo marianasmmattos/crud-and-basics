@@ -30,141 +30,84 @@ function menu() {
 
             if (button == btnRT) {
                 document.querySelector('div#regradetres').style.transform = 'translateY(15vh)';
-                document.querySelector('div#cadastro').style.transform = 'translateY(100vh)';
-                document.querySelector('div#wichrgb').style.transform = 'translateY(100vh)';
-                document.querySelector('div#crudAPI1').style.transform = 'translateY(100vh)';
-                document.querySelector('div#radiopodcast').style.transform = 'translateY(100vh)';
-                document.querySelector('div#megasena').style.transform = 'translateY(100vh)';
+                document.querySelector('div#cadastro').style.display = 'none';
+                document.querySelector('div#wichrgb').style.display = 'none';
+                document.querySelector('div#crudAPI1').style.display = 'none';
+                document.querySelector('div#radiopodcast').style.display = 'none';
+                document.querySelector('div#megasena').style.display = 'none';
             }
             if (button == send) {
                 regrade3();
             }
             if (button == btnRGB) {
-                if (innerHeight > 650) {
-                    document.querySelector('div#wichrgb').style.transform = 'translateY(-90vh)';
-                } 
-                if (innerHeight > 850) {
-                    document.querySelector('div#wichrgb').style.transform = 'translateY(-70vh)';
-                }
-                if (innerHeight > 1000) {
-                    document.querySelector('div#wichrgb').style.transform = 'translateY(-60vh)';
-                }
-                document.querySelector('div#regradetres').style.transform = 'translateY(100vh)';
-                document.querySelector('div#cadastro').style.transform = 'translateY(100vh)';
-                document.querySelector('div#crudAPI1').style.transform = 'translateY(100vh)';
-                document.querySelector('div#radiopodcast').style.transform = 'translateY(100vh)';
-                document.querySelector('div#megasena').style.transform = 'translateY(100vh)';
+                document.querySelector('div#wichrgb').style.display = 'flex';
+                document.querySelector('div#wichrgb').style.transform = 'translateY(15vh)';
+                document.querySelector('div#regradetres').style.display = 'none';
+                document.querySelector('div#cadastro').style.display = 'none';
+                document.querySelector('div#crudAPI1').style.display = 'none';
+                document.querySelector('div#radiopodcast').style.display = 'none';
+                document.querySelector('div#megasena').style.display = 'none';
             }
             if (button == rgbEX){
-                if (innerHeight > 650) {
-                    document.querySelector('div#rgb').style.transform = 'translateY(-150vh)';
-                } 
-                if (innerHeight > 850) {
-                    document.querySelector('div#rgb').style.transform = 'translateY(-110vh)';
-                }
-                if (innerHeight > 1000) {
-                    document.querySelector('div#rgb').style.transform = 'translateY(-100vh)';
-                }
-                document.querySelector('div#wichrgb').style.transform = 'translateY(100vh)';
+                document.querySelector('div#rgb').style.display = 'flex';
+                document.querySelector('div#wichrgb').style.display = 'none';
             } else {
-                document.querySelector('div#rgb').style.transform = 'translateY(100vh)';
+                document.querySelector('div#rgb').style.display = 'none';
             }
             if (button == rgbBGN){
-                if (innerHeight > 650) {
-                    document.querySelector('#rgbBG').style.transform = 'translateY(-100vh)';
-                } 
-                if (innerHeight > 850) {
-                    document.querySelector('#rgbBG').style.transform = 'translateY(-90vh)';
-                }
-                if (innerHeight > 1000) {
-                    document.querySelector('#rgbBG').style.transform = 'translateY(-70vh)';
-                }
-                document.querySelector('div#wichrgb').style.transform = 'translateY(100vh)';
+                document.querySelector('#rgbBG').style.display = 'flex';
+                document.querySelector('div#rgbBG').style.transform = 'translateY(15vh)';            
+                document.querySelector('div#wichrgb').style.display = 'none';
             } else {
-                document.querySelector('div#rgbBG').style.transform = 'translateY(100vh)';
+                document.querySelector('div#rgbBG').style.display = 'none';
             }
             if (button == random) {
                 randomBG();
-                if (innerHeight > 650) {
-                    document.querySelector('#rgbBG').style.transform = 'translateY(-100vh)';
-                } 
-                if (innerHeight > 850) {
-                    document.querySelector('#rgbBG').style.transform = 'translateY(-90vh)';
-                }
-                if (innerHeight > 1000) {
-                    document.querySelector('#rgbBG').style.transform = 'translateY(-70vh)';
-                }
-                document.querySelector('div#cadastro').style.transform = 'translateY(100vh)';
-                document.querySelector('div#wichrgb').style.transform = 'translateY(100vh)';
-                document.querySelector('div#regradetres').style.transform = 'translateY(100vh)';
-                document.querySelector('div#crudAPI1').style.transform = 'translateY(100vh)';
-                document.querySelector('div#radiopodcast').style.transform = 'translateY(100vh)';
-                document.querySelector('div#megasena').style.transform = 'translateY(100vh)';
+                document.querySelector('#rgbBG').style.display = 'flex';
+                document.querySelector('div#rbgBG').style.transform = 'translateY(15vh)';
+                document.querySelector('div#cadastro').style.display = 'none';
+                document.querySelector('div#wichrgb').style.display = 'none';
+                document.querySelector('div#regradetres').style.display = 'none';
+                document.querySelector('div#crudAPI1').style.display = 'none';
+                document.querySelector('div#radiopodcast').style.display = 'none';
+                document.querySelector('div#megasena').style.display = 'none';
             }
             if (button == btnCRUD) {
-                if (innerHeight > 650) {
-                    document.querySelector('div#cadastro').style.transform = 'translateY(-45vh)';
-                } 
-                if (innerHeight > 850) {
-                    document.querySelector('div#cadastro').style.transform = 'translateY(-40vh)';
-                }
-                if (innerHeight > 1000) {
-                    document.querySelector('div#cadastro').style.transform = 'translateY(-30vh)';
-                }
-                document.querySelector('div#wichrgb').style.transform = 'translateY(100vh)';
-                document.querySelector('div#regradetres').style.transform = 'translateY(100vh)';
-                document.querySelector('div#crudAPI1').style.transform = 'translateY(100vh)';
-                document.querySelector('div#radiopodcast').style.transform = 'translateY(100vh)';
-                document.querySelector('div#megasena').style.transform = 'translateY(100vh)';
+                document.querySelector('div#cadastro').style.display = 'flex';
+                document.querySelector('div#cadastro').style.transform = 'translateY(15vh)';
+                document.querySelector('div#wichrgb').style.display = 'none';
+                document.querySelector('div#regradetres').style.display = 'none';
+                document.querySelector('div#crudAPI1').style.display = 'none';
+                document.querySelector('div#radiopodcast').style.display = 'none';
+                document.querySelector('div#megasena').style.display = 'none';
             }
             if (button == crudAPI) {
-                if (innerHeight > 650) {
-                    document.querySelector('div#crudAPI1').style.transform = 'translateY(-195vh)';
-                } 
-                if (innerHeight > 850) {
-                    document.querySelector('div#crudAPI1').style.transform = 'translateY(-155)';
-                }
-                if (innerHeight > 1000) {
-                    document.querySelector('div#crudAPI1').style.transform = 'translateY(-135vh)';
-                }
-                document.querySelector('div#rgbBG').style.transform = 'translateY(100vh)';
-                document.querySelector('div#cadastro').style.transform = 'translateY(100vh)';
-                document.querySelector('div#wichrgb').style.transform = 'translateY(100vh)';
-                document.querySelector('div#regradetres').style.transform = 'translateY(100vh)';
-                document.querySelector('div#radiopodcast').style.transform = 'translateY(100vh)';
-                document.querySelector('div#megasena').style.transform = 'translateY(100vh)';
+                document.querySelector('div#crudAPI1').style.display = 'flex';
+                document.querySelector('div#crudAPI1').style.transform = 'translateY(15vh)';
+                document.querySelector('div#rgbBG').style.display = 'none';
+                document.querySelector('div#cadastro').style.display = 'none';
+                document.querySelector('div#wichrgb').style.display = 'none';
+                document.querySelector('div#regradetres').style.display = 'none';
+                document.querySelector('div#radiopodcast').style.display = 'none';
+                document.querySelector('div#megasena').style.display = 'none';
             }
             if (button == APIpodcast) {
-                if (innerHeight > 650) {
-                    document.querySelector('div#radiopodcast').style.transform = 'translateY(-250vh)';
-                } 
-                if (innerHeight > 850) {
-                    document.querySelector('div#radiopodcast').style.transform = 'translateY(-200vh)';
-                }
-                if (innerHeight > 1000) {
-                    document.querySelector('div#radiopodcast').style.transform = 'translateY(-170vh)';
-                }
-                document.querySelector('div#wichrgb').style.transform = 'translateY(100vh)';
-                document.querySelector('div#regradetres').style.transform = 'translateY(100vh)';
-                document.querySelector('div#cadastro').style.transform = 'translateY(100vh)';
-                document.querySelector('div#crudAPI1').style.transform = 'translateY(100vh)';
-                document.querySelector('div#megasena').style.transform = 'translateY(100vh)';
+                document.querySelector('div#radiopodcast').style.display = 'flex';
+                document.querySelector('div#radiopodcast').style.transform = 'translateY(15vh)';
+                document.querySelector('div#wichrgb').style.display = 'none';
+                document.querySelector('div#regradetres').style.display = 'none';
+                document.querySelector('div#cadastro').style.display = 'none';
+                document.querySelector('div#crudAPI1').style.display = 'none';
+                document.querySelector('div#megasena').style.display = 'none';
             }
             if (button == megasena) {
-                if (innerHeight > 650) {
-                    document.querySelector('div#megasena').style.transform = 'translateY(-285vh)';
-                } 
-                if (innerHeight > 850) {
-                    document.querySelector('div#megasena').style.transform = 'translateY(-230vh)';
-                }
-                if (innerHeight > 1000) {
-                    document.querySelector('div#megasena').style.transform = 'translateY(-200vh)';
-                }
-                document.querySelector('div#wichrgb').style.transform = 'translateY(100vh)';
-                document.querySelector('div#regradetres').style.transform = 'translateY(100vh)';
-                document.querySelector('div#cadastro').style.transform = 'translateY(100vh)';
-                document.querySelector('div#crudAPI1').style.transform = 'translateY(100vh)';
-                document.querySelector('div#radiopodcast').style.transform = 'translateY(100vh)';
+                document.querySelector('div#megasena').style.display = 'flex';
+                document.querySelector('div#megasena').style.transform = 'translateY(15vh)';
+                document.querySelector('div#wichrgb').style.display = 'none';
+                document.querySelector('div#regradetres').style.display = 'none';
+                document.querySelector('div#cadastro').style.display = 'none';
+                document.querySelector('div#crudAPI1').style.display = 'none';
+                document.querySelector('div#radiopodcast').style.display = 'none';
             }
         });
     });
